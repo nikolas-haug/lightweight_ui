@@ -74,21 +74,18 @@ $blockquote-background-color: transparent;
 //=====================================================
 
 // Global
-$global-background-color: #dedede;
+$global-background-color: #E890AD;
 
-$color-primary: tomato;
+$color-primary: #FFBF9E;
 $color-secondary: lightblue;
 $color-tertiary: orange;
 
-$color-link: green;
-$color-link-hover: lighten($color-link, 10%);
+$color-link: #3C2E37;
+// $color-link-hover: lighten($color-link, 10%);
+$color-link-hover: $font-color-primary;
 
 // Buttons
 $accent-color: grey;
-
-// Forms
-$error: #D33C40;                                   
-$success: #29de7d;
 
 //=====================================================
 // SPACING

@@ -185,7 +185,7 @@
     object-fit: cover;
 }
 
-// Justify and align content  
+// Justify and align content
 .justify-content-center {
     justify-content: center;
 }
@@ -202,4 +202,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// Flex order
+@media (max-width: $medium) {
+    .flex-order-sm-1 {
+        order: 1;
+    }
 }
