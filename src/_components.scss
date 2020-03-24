@@ -188,6 +188,7 @@ blockquote {
   cursor: pointer;
   text-decoration: none;
   line-height: 1;
+  transition: all .3s;
 }
 // Buttons on hover
 %buttons-hover {

@@ -22,6 +22,7 @@ ul,
 dl,
 table {
     margin: 0 0 $typography-margins 0;
+    letter-spacing: $letter-spacing-content;
 }
 
 // Headings
@@ -33,6 +34,7 @@ h5 {
     margin: $typography-margins 0;
     font-weight: $heading-font-weight;
     font-family: $heading-font-family-primary;
+    letter-spacing: $letter-spacing-heading;
     line-height: $heading-line-height;
     color: $heading-font-color-primary;
 }
