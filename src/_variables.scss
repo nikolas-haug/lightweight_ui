@@ -5,6 +5,28 @@
 */
 
 //=====================================================
+// COLOR
+//=====================================================
+
+// Global
+$global-background-color: #0F74B8;
+
+$color-primary: #BAF2BB;
+$color-secondary: #011638;
+$color-tertiary: #588B8B;
+
+// Basic
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #D7D9CE;
+
+$color-link: #3C2E37;
+$color-link-hover: lighten($color-link, 10%);
+
+// Buttons
+$accent-color: $color-primary;
+
+//=====================================================
 // CONTAINERS
 //=====================================================
 
@@ -37,13 +59,13 @@ $base-line-height: 1.5;
 
 // Global
 $font-family-primary: "Roboto", "Arial", sans-serif;
-$font-color-primary: #fff;
-$font-color-secondary: #333;
+$font-color-primary: $color-black;
+$font-color-secondary: $color-white;
 $font-size-primary: 1.6rem;
 
 // Headings
 $heading-font-family-primary: "Roboto", "Arial", sans-serif;
-$heading-font-color-primary: #f4f3f3;
+$heading-font-color-primary: $color-black;
 $heading-font-weight: 700;
 $heading-line-height: 1.2;
 
@@ -66,35 +88,12 @@ $typography-margins: 1.2rem;
 
 // Blockquote
 $blockquote-font-size: 1.3rem;
-$blockquote-border-color: #f0f0f0;
+$blockquote-border-color: $color-grey;
 $blockquote-background-color: transparent;
 
 // Letter spacing
 $letter-spacing-content: .8px;
 $letter-spacing-heading: 1px;
-
-//=====================================================
-// COLOR
-//=====================================================
-
-// Global
-$global-background-color: coral;
-
-$color-primary: blue;
-$color-secondary: lightblue;
-$color-tertiary: orange;
-
-// Basic
-$color-white: #fff;
-$color-black: #000;
-$color-grey: #777;
-
-$color-link: #3C2E37;
-// $color-link-hover: lighten($color-link, 10%);
-$color-link-hover: $font-color-primary;
-
-// Buttons
-$accent-color: grey;
 
 //=====================================================
 // SPACING
@@ -109,7 +108,7 @@ $padding-utility: 1rem;
 
 $border-width: 1px;
 $border-style: solid;
-$border-color: #dedede;
+$border-color: $color-grey;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
@@ -120,7 +119,7 @@ $borders: $border-width $border-style $border-color;
 $navbar-padding: 1rem;
 $mobile-navbar-padding: 2.5rem;
 
-$navbar-link-color-hover: lightpink;
+$navbar-link-color-hover: darken($color-primary, 15%);
 
 $mobile-navbar-background-color: $global-background-color;
 
@@ -148,7 +147,7 @@ $error: red;
 
 $button-background-color: $color-primary;
 $button-background-hover: darken($button-background-color, 10%);
-$button-color: #ffffff;
+$button-color: $color-white;
 $button-font-weight: 600;
 $button-font-family: "Roboto", "Arial", sans-serif;
 $button-font-size: 1.5rem;
@@ -160,7 +159,7 @@ $button-text-transform: none;
 
 // Accent buttons
 $accent-button-background-color: $color-secondary;
-$accent-button-color: #ffffff;
+$accent-button-color: $color-white;
 $accent-button-color-hover: lighten($accent-button-background-color, 10%);
 
 // Muted Buttons

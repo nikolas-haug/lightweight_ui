@@ -348,11 +348,11 @@ figure {
 html {
   font-size: 62.5%;
   font-family: "Roboto", "Arial", sans-serif;
-  color: #fff; }
+  color: #000; }
 
 body {
   line-height: 1.5;
-  background-color: coral;
+  background-color: #0F74B8;
   font-size: 1.6rem; }
 
 p,
@@ -373,7 +373,7 @@ h5 {
   font-family: "Roboto", "Arial", sans-serif;
   letter-spacing: 1px;
   line-height: 1.2;
-  color: #f4f3f3; }
+  color: #000; }
 
 h1 {
   font-size: 2.8rem; }
@@ -406,7 +406,7 @@ a {
   color: #3C2E37;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #fff;
+    color: #594451;
     text-decoration: underline; }
 
 /** 
@@ -432,7 +432,7 @@ a {
   width: 100%;
   height: 100%; }
   .main-navigation ul li a:hover {
-    color: #fff; }
+    color: #000; }
 
 .menu-toggle {
   display: none; }
@@ -489,11 +489,11 @@ a {
     justify-content: center;
     width: 100%;
     padding: 2.5rem;
-    background: coral;
+    background: #0F74B8;
     border: none;
     margin-bottom: 0; }
     .menu-toggle:focus, .menu-toggle:active, .menu-toggle:hover {
-      background: coral;
+      background: #0F74B8;
       border: none;
       margin-bottom: 0; }
   .main-navigation.toggled ul {
@@ -504,7 +504,7 @@ a {
 blockquote {
   background: transparent;
   margin: 0 0 1.2rem 0;
-  border-left: 10px solid #f0f0f0;
+  border-left: 10px solid #D7D9CE;
   padding: 0 1.5rem;
   font-size: 1.3rem; }
   blockquote cite {
@@ -515,10 +515,10 @@ blockquote {
 .button, a.button, button, [type=submit], [type=reset], [type=button] {
   -webkit-appearance: none;
   display: inline-block;
-  border: 1px solid blue;
+  border: 1px solid #BAF2BB;
   border-radius: 4px;
-  background: blue;
-  color: #ffffff;
+  background: #BAF2BB;
+  color: #fff;
   font-weight: 600;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.5rem;
@@ -533,15 +533,15 @@ blockquote {
   transition: all .3s; }
 
 .button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  border: 1px solid #0000cc;
-  background: #0000cc;
-  color: #ffffff;
+  border: 1px solid #8fea91;
+  background: #8fea91;
+  color: #fff;
   text-decoration: none; }
 
 .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
-  border: 1px solid #0000cc;
-  background: #0000cc;
-  color: #ffffff;
+  border: 1px solid #8fea91;
+  background: #8fea91;
+  color: #fff;
   text-decoration: none; }
 
 .button::-moz-focus-inner, a.button::-moz-focus-inner, button::-moz-focus-inner, [type=submit]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=button]::-moz-focus-inner {
@@ -550,28 +550,28 @@ blockquote {
 
 .accent-button,
 a.accent-button {
-  color: #ffffff;
-  border: 1px solid lightblue;
-  background: lightblue; }
+  color: #fff;
+  border: 1px solid #011638;
+  background: #011638; }
   .accent-button:hover, .accent-button:focus, .accent-button:active,
   a.accent-button:hover,
   a.accent-button:focus,
   a.accent-button:active {
-    color: #d4ebf2;
-    border: 1px solid #86c5da;
-    background: #86c5da; }
+    color: #022a6a;
+    border: 1px solid #000206;
+    background: #000206; }
 
 .muted-button,
 a.muted-button {
   background: transparent;
-  border: 1px solid grey;
-  color: #010101; }
+  border: 1px solid #BAF2BB;
+  color: #1b921e; }
   .muted-button:hover, .muted-button:focus, .muted-button:active,
   a.muted-button:hover,
   a.muted-button:focus,
   a.muted-button:active {
-    color: #010101;
-    border: 1px solid #343434;
+    color: #1b921e;
+    border: 1px solid #39da3c;
     background: transparent; }
 
 .round-button,
@@ -589,7 +589,7 @@ a.full-button {
 
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   display: block;
-  border: 1px solid #dedede;
+  border: 1px solid #D7D9CE;
   border-radius: 4px;
   padding: 1rem;
   outline: none;
@@ -601,7 +601,7 @@ a.full-button {
   line-height: 1; }
 
 [type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover {
-  border: 1px solid #c5c5c5; }
+  border: 1px solid #c0c3b1; }
 
 [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
   border: 1px solid #3C2E37;
@@ -612,7 +612,7 @@ textarea {
   height: auto; }
 
 fieldset {
-  border: 1px solid #dedede;
+  border: 1px solid #D7D9CE;
   border-radius: 4px;
   padding: 1rem;
   margin: 1.2rem 0; }
@@ -622,7 +622,7 @@ legend {
   font-weight: 600; }
 
 select {
-  color: #333;
+  color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
   line-height: 1.5; }
@@ -673,7 +673,7 @@ textarea.is-success:active {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: #4d4d4d; }
+  color: #64e266; }
 
 /**
 *
