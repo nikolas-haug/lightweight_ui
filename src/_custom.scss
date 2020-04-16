@@ -3,3 +3,19 @@
 * THEME SPECIFIC COMPONENTS
 *
 */
+
+// Gutenberg styles
+.wp-block-image figure {
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 650px) {
+    .wp-block-image .alignright {
+      float: none;
+      margin: 0;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }

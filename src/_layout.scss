@@ -6,15 +6,8 @@
 
 // CONTAINERS
 
-.container,
-.container-sm,
-.container-med,
-.container-lg {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px; 
-  margin-right: auto;
-  margin-left: auto;
+.container {
+  @include container-styles
 }
 
 .container-full {
@@ -71,7 +64,13 @@
   padding-left: $grid-column-padding;
 }
 
-.remove-gutters > [class*="col-"] {
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -108,6 +107,7 @@
 @include x-small-breakpoint {
   .container-sm {
     @include container-size($x-small, $container-gutter);
+    @include container-styles
   }
 
   .col-sm {
@@ -151,6 +151,7 @@
 @include small-breakpoint {
   .container-med {
     @include container-size($small, $container-gutter);
+    @include container-styles
   }
 
   .col-med {
@@ -194,6 +195,7 @@
 @include medium-breakpoint {
   .container-lg {
     @include container-size($medium, $container-gutter);
+    @include container-styles
   }
 
   .col-lg {
