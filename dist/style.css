@@ -4,7 +4,7 @@
     Author: Niko
     Author URI: https://nikolashaug.com
     Description: A lightweight sass/css framework
-    Version: 2.0
+    Version: 2.1
 
 */
 /** 
@@ -423,8 +423,8 @@ a {
     display: flex;
     list-style: none;
     width: 100%;
-    margin: 0 0 0 0;
-    justify-content: center; }
+    justify-content: center;
+    margin: 0; }
 
 .main-navigation ul li a {
   display: inline-block;
@@ -567,7 +567,8 @@ a {
 .slider-menu ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin: 0; }
 
 .slider-menu ul li a {
   display: inline-block;
@@ -791,6 +792,11 @@ textarea.is-success:active {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.container-stretch {
+  width: 100%;
   margin-right: auto;
   margin-left: auto; }
 
