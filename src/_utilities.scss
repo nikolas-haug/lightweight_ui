@@ -210,3 +210,52 @@
         order: 1;
     }
 }
+
+// No margins and paddings for different breakpoints
+@media (max-width: $x-small) {
+    .pad-xs-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mar-xs-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: $small) {
+    .pad-sm-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mar-sm-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: $medium) {
+    .pad-med-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .mar-med-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: $large) {
+    .pad-lg-0 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .mar-lg-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
