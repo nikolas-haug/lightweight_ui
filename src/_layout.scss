@@ -18,7 +18,28 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
 }
+
+// FIXED SIZE CONTAINERS
+
+.container-sm {
+  @include container-size($x-small, $container-gutter);
+  @include container-styles
+}
+
+.container-med {
+  @include container-size($small, $container-gutter);
+  @include container-styles
+}
+
+.container-lg {
+  @include container-size($medium, $container-gutter);
+  @include container-styles
+}
+
+// MAIN CONTAINER BREAKPOINTS 
 
 @include x-small-breakpoint {
   .container {
@@ -107,10 +128,6 @@
 
 // Between x-small and small breakpoints
 @include x-small-breakpoint {
-  .container-sm {
-    @include container-size($x-small, $container-gutter);
-    @include container-styles
-  }
 
   .col-sm {
     flex-grow: 1;
@@ -151,10 +168,6 @@
 
 // Between small and medium breakpoints
 @include small-breakpoint {
-  .container-med {
-    @include container-size($small, $container-gutter);
-    @include container-styles
-  }
 
   .col-med {
     flex-grow: 1;
@@ -195,10 +208,6 @@
 
 // Between medium and large breakpoints
 @include medium-breakpoint {
-  .container-lg {
-    @include container-size($medium, $container-gutter);
-    @include container-styles
-  }
 
   .col-lg {
     flex-grow: 1;
