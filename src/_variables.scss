@@ -30,6 +30,13 @@ $accent-color: $color-primary;
 // CONTAINERS
 //=====================================================
 
+// (Media query ~ breakpoints)
+// 0 - 600px        :     Phone
+// 600 - 900px      :     Tablet portrait
+// 900 - 1200px     :     Tablet landscape
+// 1200 - 1800px    :     ~ Desktop 
+// 1800px +         :     Large desktop
+
 $x-small: 480px;
 $small: 750px;
 $medium: 992px;
