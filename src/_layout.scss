@@ -7,36 +7,28 @@
 // CONTAINERS
 
 .container {
-  @include container-styles
-}
-
-.container-full {
-  @include container-styles
+  @include container-styles;
 }
 
 .container-stretch {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: .5rem;
-  padding-left: .5rem;
+  @include container-styles;
 }
 
 // FIXED SIZE CONTAINERS
 
 .container-sm {
   @include container-size($x-small, $container-gutter);
-  @include container-styles
+  @include container-styles;
 }
 
 .container-med {
   @include container-size($small, $container-gutter);
-  @include container-styles
+  @include container-styles;
 }
 
 .container-lg {
   @include container-size($medium, $container-gutter);
-  @include container-styles
+  @include container-styles;
 }
 
 // MAIN CONTAINER BREAKPOINTS 

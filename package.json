@@ -6,18 +6,16 @@
   "scripts": {
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver dev",
-    "build": "node-sass ./main.scss ./dist/style.css --output-style compressed",
     "dev": "node-sass ./main.scss ./dist/style.css -w",
-    "concat": "concat -o dist/concat.css css/icons.css dist/style.css",
-    "prefix": "postcss --use autoprefixer -b 'last 5 versions' dist/concat.css -o dist/style.prefix.css",
+    "build": "node-sass ./main.scss ./dist/style.css --output-style compressed",
+    "prefix": "postcss --use autoprefixer -b 'last 5 versions' dist/style.css -o dist/style.prefix.css",
     "compress": "node-sass dist/style.prefix.css dist/style.min.css --output-style compressed",
-    "build:all": "npm-run-all build concat prefix compress"
+    "build:all": "npm-run-all build prefix compress"
   },
   "author": "niko",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.6",
-    "concat": "^1.0.3",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
