@@ -8,20 +8,22 @@
 // COLOR
 //=====================================================
 
-// Global
-$global-background-color: #0F74B8;
-
-$color-primary: #BAF2BB;
-$color-secondary: #011638;
-$color-tertiary: #588B8B;
+$color-primary: #5DCAED;
+$color-secondary: #6B83F0;
+$color-tertiary: #FFD05E;
 
 // Basic
 $color-white: #fff;
 $color-black: #000;
-$color-grey: #D7D9CE;
 
-$color-link: #3C2E37;
+$color-grey-dark: #2f3f47;
+$color-grey-light: #fafbfc;
+
+$color-link: $color-secondary;
 $color-link-hover: lighten($color-link, 10%);
+
+// Global
+$global-background-color: $color-primary;
 
 // Buttons
 $accent-color: $color-primary;
@@ -97,7 +99,7 @@ $typography-margins: 1.2rem;
 
 // Blockquote
 $blockquote-font-size: 1.3rem;
-$blockquote-border-color: $color-grey;
+$blockquote-border-color: $color-grey-dark;
 $blockquote-background-color: transparent;
 
 // Letter spacing
@@ -117,7 +119,7 @@ $padding-utility: 1rem;
 
 $border-width: 1px;
 $border-style: solid;
-$border-color: $color-grey;
+$border-color: $color-grey-dark;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
@@ -154,9 +156,9 @@ $error: red;
 // Buttons
 //======================================================
 
-$button-background-color: $color-primary;
+$button-background-color: $color-secondary;
 $button-background-hover: darken($button-background-color, 10%);
-$button-color: $color-white;
+$button-color: $color-white; 
 $button-font-weight: 600;
 $button-font-family: "Roboto", "Arial", sans-serif;
 $button-font-size: 1.5rem;
