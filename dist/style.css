@@ -406,7 +406,7 @@ a {
   color: #999;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #b3b3b3;
+    color: gray;
     text-decoration: underline; }
 
 ::selection {
@@ -584,7 +584,7 @@ a {
   transition: all 0.3s; }
 
 .slider-menu ul li a:hover {
-  color: #b3b3b3; }
+  color: gray; }
 
 /* 
  * MEDIA QUERIES - Mobile view
@@ -656,15 +656,15 @@ blockquote {
 .accent-button,
 a.accent-button {
   color: #fff;
-  border: 1px solid #999;
-  background: #999; }
+  border: 1px solid #ccc;
+  background: #ccc; }
   .accent-button:hover, .accent-button:focus, .accent-button:active,
   a.accent-button:hover,
   a.accent-button:focus,
   a.accent-button:active {
-    color: #b3b3b3;
-    border: 1px solid gray;
-    background: gray; }
+    color: #e6e6e6;
+    border: 1px solid #b3b3b3;
+    background: #b3b3b3; }
 
 .muted-button,
 a.muted-button {

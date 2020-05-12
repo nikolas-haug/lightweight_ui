@@ -20,7 +20,7 @@ $color-white: #fff;
 $color-black: #101010;
 
 $color-link: $color-secondary;
-$color-link-hover: lighten($color-link, 10%);
+$color-link-hover: darken($color-link, 10%);
 
 // Global
 $global-background-color: $color-white;
@@ -169,7 +169,7 @@ $button-border-radius: $border-radius;
 $button-text-transform: none;
 
 // Accent buttons
-$accent-button-background-color: $color-secondary;
+$accent-button-background-color: $color-primary;
 $accent-button-color: $color-white;
 $accent-button-color-hover: lighten($accent-button-background-color, 10%);
 
