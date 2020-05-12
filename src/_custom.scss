@@ -3,6 +3,13 @@
 * THEME SPECIFIC COMPONENTS
 *
 */
+header {
+  background-color: $color-primary;
+  text-align: center;
+  padding: 5rem;
+  margin-top: 5rem;
+  border-radius: .5rem;
+}
 
 // Gutenberg styles
 .wp-block-image figure {

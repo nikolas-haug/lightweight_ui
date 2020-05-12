@@ -348,11 +348,11 @@ figure {
 html {
   font-size: 62.5%;
   font-family: "Roboto", "Arial", sans-serif;
-  color: #000; }
+  color: #4c4c4c; }
 
 body {
   line-height: 1.5;
-  background-color: #5DCAED;
+  background-color: #fff;
   font-size: 1.6rem; }
 
 p,
@@ -373,7 +373,7 @@ h5 {
   font-family: "Roboto", "Arial", sans-serif;
   letter-spacing: 1px;
   line-height: 1.2;
-  color: #000; }
+  color: #4c4c4c; }
 
 h1 {
   font-size: 2.8rem; }
@@ -403,14 +403,14 @@ h5 {
     font-size: 2rem; } }
 
 a {
-  color: #6B83F0;
+  color: #999;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #99aaf5;
+    color: #b3b3b3;
     text-decoration: underline; }
 
 ::selection {
-  background-color: #5DCAED;
+  background-color: #ccc;
   color: #fff; }
 
 /** 
@@ -436,7 +436,7 @@ a {
   width: 100%;
   height: 100%; }
   .main-navigation ul li a:hover {
-    color: #000; }
+    color: #4c4c4c; }
 
 .menu-toggle {
   display: none; }
@@ -493,11 +493,11 @@ a {
     justify-content: center;
     width: 100%;
     padding: 2.5rem;
-    background: #5DCAED;
+    background: #fff;
     border: none;
     margin-bottom: 0; }
     .menu-toggle:focus, .menu-toggle:active, .menu-toggle:hover {
-      background: #5DCAED;
+      background: #fff;
       border: none;
       margin-bottom: 0; }
   .main-navigation.toggled ul {
@@ -519,7 +519,7 @@ a {
   cursor: pointer;
   display: none;
   align-items: center;
-  background: #6B83F0;
+  background: #999;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
 
 .slider-menu__toggler span {
@@ -561,7 +561,7 @@ a {
   */
 .slider-menu {
   height: 100%;
-  background: #5DCAED;
+  background: #fff;
   justify-content: center;
   transition: 0.3s left cubic-bezier(0.77, 0, 0.175, 1); }
 
@@ -580,11 +580,11 @@ a {
   text-transform: uppercase;
   font-size: 1.6rem;
   padding: 1rem;
-  color: #6B83F0;
+  color: #999;
   transition: all 0.3s; }
 
 .slider-menu ul li a:hover {
-  color: #99aaf5; }
+  color: #b3b3b3; }
 
 /* 
  * MEDIA QUERIES - Mobile view
@@ -609,7 +609,7 @@ a {
 blockquote {
   background: transparent;
   margin: 0 0 1.2rem 0;
-  border-left: 10px solid #2f3f47;
+  border-left: 10px solid #4c4c4c;
   padding: 0 1.5rem;
   font-size: 1.3rem; }
   blockquote cite {
@@ -620,9 +620,9 @@ blockquote {
 .button, a.button, button, [type=submit], [type=reset], [type=button] {
   -webkit-appearance: none;
   display: inline-block;
-  border: 1px solid #6B83F0;
+  border: 1px solid #999;
   border-radius: 4px;
-  background: #6B83F0;
+  background: #999;
   color: #fff;
   font-weight: 600;
   font-family: "Roboto", "Arial", sans-serif;
@@ -638,14 +638,14 @@ blockquote {
   transition: all 0.3s; }
 
 .button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
-  border: 1px solid #3d5ceb;
-  background: #3d5ceb;
+  border: 1px solid gray;
+  background: gray;
   color: #fff;
   text-decoration: none; }
 
 .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
-  border: 1px solid #3d5ceb;
-  background: #3d5ceb;
+  border: 1px solid gray;
+  background: gray;
   color: #fff;
   text-decoration: none; }
 
@@ -656,27 +656,27 @@ blockquote {
 .accent-button,
 a.accent-button {
   color: #fff;
-  border: 1px solid #6B83F0;
-  background: #6B83F0; }
+  border: 1px solid #999;
+  background: #999; }
   .accent-button:hover, .accent-button:focus, .accent-button:active,
   a.accent-button:hover,
   a.accent-button:focus,
   a.accent-button:active {
-    color: #99aaf5;
-    border: 1px solid #3d5ceb;
-    background: #3d5ceb; }
+    color: #b3b3b3;
+    border: 1px solid gray;
+    background: gray; }
 
 .muted-button,
 a.muted-button {
   background: transparent;
-  border: 1px solid #5DCAED;
-  color: #083544; }
+  border: 1px solid #ccc;
+  color: #4d4d4d; }
   .muted-button:hover, .muted-button:focus, .muted-button:active,
   a.muted-button:hover,
   a.muted-button:focus,
   a.muted-button:active {
-    color: #083544;
-    border: 1px solid #127d9f;
+    color: #4d4d4d;
+    border: 1px solid gray;
     background: transparent; }
 
 .round-button,
@@ -694,7 +694,7 @@ a.full-button {
 
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   display: block;
-  border: 1px solid #2f3f47;
+  border: 1px solid #4c4c4c;
   border-radius: 4px;
   padding: 1rem;
   outline: none;
@@ -706,18 +706,18 @@ a.full-button {
   line-height: 1; }
 
 [type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover {
-  border: 1px solid #1b2428; }
+  border: 1px solid #333333; }
 
 [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
-  border: 1px solid #6B83F0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #f6f7fe; }
+  border: 1px solid #999;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #e6e6e6; }
 
 textarea {
   overflow: auto;
   height: auto; }
 
 fieldset {
-  border: 1px solid #2f3f47;
+  border: 1px solid #4c4c4c;
   border-radius: 4px;
   padding: 1rem;
   margin: 1.2rem 0; }
@@ -778,7 +778,7 @@ textarea.is-success:active {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: #17a1cd; }
+  color: #999999; }
 
 .scroll-top-btn {
   position: fixed;
@@ -1410,6 +1410,13 @@ textarea.is-success:active {
 * THEME SPECIFIC COMPONENTS
 *
 */
+header {
+  background-color: #ccc;
+  text-align: center;
+  padding: 5rem;
+  margin-top: 5rem;
+  border-radius: .5rem; }
+
 .wp-block-image figure {
   margin-top: 2rem; }
 

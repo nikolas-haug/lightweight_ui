@@ -8,22 +8,22 @@
 // COLOR
 //=====================================================
 
-$color-primary: #5DCAED;
-$color-secondary: #6B83F0;
-$color-tertiary: #FFD05E;
+// Grayscale first design palette
+$color-primary: #ccc;
+$color-secondary: #999;
+
+$color-grey-dark: #4c4c4c;
+$color-grey-light: #dedede;
 
 // Basic
 $color-white: #fff;
-$color-black: #000;
-
-$color-grey-dark: #2f3f47;
-$color-grey-light: #fafbfc;
+$color-black: #101010;
 
 $color-link: $color-secondary;
 $color-link-hover: lighten($color-link, 10%);
 
 // Global
-$global-background-color: $color-primary;
+$global-background-color: $color-white;
 
 // Buttons
 $accent-color: $color-primary;
@@ -70,13 +70,13 @@ $base-line-height: 1.5;
 
 // Global
 $font-family-primary: "Roboto", "Arial", sans-serif;
-$font-color-primary: $color-black;
-$font-color-secondary: $color-white;
+$font-color-primary: $color-grey-dark;
+$font-color-secondary: $color-white; 
 $font-size-primary: 1.6rem;
 
 // Headings
 $heading-font-family-primary: "Roboto", "Arial", sans-serif;
-$heading-font-color-primary: $color-black;
+$heading-font-color-primary: $color-grey-dark;
 $heading-font-weight: 700;
 $heading-line-height: 1.2;
 
