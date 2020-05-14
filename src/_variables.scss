@@ -161,7 +161,7 @@ $button-background-hover: darken($button-background-color, 10%);
 $button-color: $color-white; 
 $button-font-weight: 600;
 $button-font-family: "Roboto", "Arial", sans-serif;
-$button-font-size: 1.5rem;
+$button-font-size: $font-size-primary;
 $button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background-color;
