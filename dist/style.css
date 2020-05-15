@@ -1,10 +1,10 @@
 /*! 
 
-    Theme Name: lightweight ui (working title)
+    Theme Name: Frontend de Plumes (working title)
     Author: Niko
     Author URI: https://nikolashaug.com
     Description: A lightweight sass/css framework
-    Version: 2.3
+    Version: 2.4
 
 */
 /** 
@@ -626,7 +626,7 @@ blockquote {
   color: #fff;
   font-weight: 600;
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-transform: none;
   padding: 1rem 1.5rem;
   margin: 0 0 1.5rem 0;
@@ -700,7 +700,7 @@ a.full-button {
   outline: none;
   background: #f2f2f2;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   width: 100%;
   max-width: 100%;
   line-height: 1; }
