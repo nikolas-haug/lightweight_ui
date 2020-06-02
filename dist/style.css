@@ -808,6 +808,43 @@ textarea.is-success:active {
 .scroll-top-btn:hover {
   background: rgba(0, 0, 0, 0.9); }
 
+pre {
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  padding: 1rem;
+  tab-size: 2;
+  color: #4c4c4c;
+  font-family: Menlo, monospace;
+  font-size: 14px;
+  margin: 0 0 1.2rem 0; }
+  pre code {
+    font-family: Menlo, monospace;
+    line-height: 1.2; }
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff; }
+
+:not(pre) > code {
+  color: #4c4c4c;
+  background: transparent;
+  font-family: Menlo, monospace;
+  font-size: 14px;
+  padding: 0 0.2rem;
+  border: 1px solid #4c4c4c;
+  border-radius: 4px; }
+
 /**
 *
 * LAYOUT

@@ -576,3 +576,48 @@ textarea {
 .scroll-top-btn:hover {
   background: rgba(0, 0, 0, 0.9);
 }
+
+// Code block styling
+pre {
+  border: 0;
+  border-radius: $border-radius;
+  background: $code-background;
+  padding: 1rem;
+  tab-size: 2;
+  color: $code-color;
+  font-family: $code-family;
+  font-size: $code-size;
+  margin: 0 0 $typography-margins 0;
+
+  code {
+    font-family: $code-family;
+    line-height: 1.2;
+  }
+}
+
+// Keyboard input
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+// Inline code styling
+:not(pre) > code {
+  color: $code-color;
+  background: $code-background;
+  font-family: $code-family;
+  font-size: $code-size;
+  padding: 0 0.2rem;
+  border: $borders;
+  border-radius: $border-radius;
+}
