@@ -100,7 +100,7 @@
 @media (max-width: 500px) {
   body {
     // Need to adjust this according to collapsed menu size/padding
-    margin-top: calc(#{$mobile-navbar-padding} * 2.5);
+    // margin-top: calc(#{$mobile-navbar-padding} * 2.5);
   }
   .main-navigation {
     position: fixed;

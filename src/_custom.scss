@@ -9,6 +9,9 @@ header {
   padding: 5rem;
   margin-top: 5rem;
   border-radius: .5rem;
+  @media only screen and (max-width: $small) {
+    margin-top: 0;
+  }
 }
 
 .sidebar--fixed {
@@ -42,11 +45,11 @@ footer {
 
 @media only screen and (max-width: $small) {
   .sidebar {
-    // display: none;
     position: fixed;
     top: 0;
+    visibility: hidden;
     opacity: 0;
-    background-color: green;
+    background-color: #eee;
     width: 100%;
     transition: all .3s;
   }
@@ -99,7 +102,6 @@ footer {
   
   .mobile-toggle--active > .mobile-toggle__hamburger {
     background-color: transparent;
-    // animation: animateMobile 5s;
   }
 
   .mobile-toggle--active > .mobile-toggle__hamburger::before {
@@ -113,7 +115,7 @@ footer {
   }
 
   .sidebar-mobile--active {
-    // display: block;
+    visibility: initial;
     opacity: 1;
   }
 }

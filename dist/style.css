@@ -476,8 +476,6 @@ a {
   transform: rotate(-45deg); }
 
 @media (max-width: 500px) {
-  body {
-    margin-top: calc(2.5rem * 2.5); }
   .main-navigation {
     position: fixed;
     top: 0;
@@ -1453,6 +1451,9 @@ header {
   padding: 5rem;
   margin-top: 5rem;
   border-radius: .5rem; }
+  @media only screen and (max-width: 750px) {
+    header {
+      margin-top: 0; } }
 
 .sidebar--fixed {
   position: fixed;
@@ -1481,8 +1482,9 @@ footer {
   .sidebar {
     position: fixed;
     top: 0;
+    visibility: hidden;
     opacity: 0;
-    background-color: green;
+    background-color: #eee;
     width: 100%;
     transition: all .3s; }
   .mobile-toggle {
@@ -1525,6 +1527,7 @@ footer {
     top: 0;
     transform: rotate(-45deg); }
   .sidebar-mobile--active {
+    visibility: initial;
     opacity: 1; } }
 
 .wp-block-image figure {

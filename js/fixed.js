@@ -16,18 +16,15 @@ const sidebarItems = document.querySelectorAll('.target-link');
 // Get the mobile toggle button
 const mobileToggle = document.querySelector('.mobile-toggle');
 
+// Get the mobile hamburger
+const mobileHamburger = document.querySelector('.mobile-toggle > .mobile-toggle__hamburger');
+
 document.querySelector('.mobile-toggle').addEventListener('click', function(e) {
     sidebar.classList.toggle('sidebar-mobile--active');
 
     mobileToggle.classList.toggle('mobile-toggle--active');
 
-    if(document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.contains('open-animate')) {
-        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.add('close-animate');
-        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.remove('open-animate');
-    } else {
-        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.add('open-animate');
-        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.remove('close-animate');
-    }
+    toggleAnimation();
 
 });
 
@@ -38,6 +35,8 @@ mobileToggle.addEventListener('transitionend', function(e) {
 sidebarItems.forEach(item => {
     item.addEventListener('click', (e) => {
         sidebar.classList.remove('sidebar-mobile--active');
+        mobileToggle.classList.remove('mobile-toggle--active')
+        toggleAnimation();
     });
 });
 
@@ -59,4 +58,14 @@ function fixedSidebar() {
         item.classList.remove('sidebar--active');
     }
   });
+}
+
+function toggleAnimation() {
+    if(mobileHamburger.classList.contains('open-animate')) {
+        mobileHamburger.classList.add('close-animate');
+        mobileHamburger.classList.remove('open-animate');
+    } else {
+        mobileHamburger.classList.add('open-animate');
+        mobileHamburger.classList.remove('close-animate');
+    }
 }
