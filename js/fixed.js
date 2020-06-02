@@ -13,8 +13,26 @@ const sticky = sidebar.offsetTop;
 // Get all list items in sidebar
 const sidebarItems = document.querySelectorAll('.target-link');
 
-document.querySelector('.mobile-toggle').addEventListener('click', function() {
+// Get the mobile toggle button
+const mobileToggle = document.querySelector('.mobile-toggle');
+
+document.querySelector('.mobile-toggle').addEventListener('click', function(e) {
     sidebar.classList.toggle('sidebar-mobile--active');
+
+    mobileToggle.classList.toggle('mobile-toggle--active');
+
+    if(document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.contains('open-animate')) {
+        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.add('close-animate');
+        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.remove('open-animate');
+    } else {
+        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.add('open-animate');
+        document.querySelector('.mobile-toggle > .mobile-toggle__hamburger').classList.remove('close-animate');
+    }
+
+});
+
+mobileToggle.addEventListener('transitionend', function(e) {
+    this.classList.remove('animate');
 });
 
 sidebarItems.forEach(item => {

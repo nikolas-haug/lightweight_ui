@@ -1473,23 +1473,59 @@ header {
 ul {
   list-style: none; }
 
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid #4c4c4c; }
+
 @media only screen and (max-width: 750px) {
   .sidebar {
-    display: none;
     position: fixed;
     top: 0;
+    opacity: 0;
     background-color: green;
-    width: 100%; }
+    width: 100%;
+    transition: all .3s; }
   .mobile-toggle {
-    display: block;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     z-index: 999;
-    background-color: orange;
-    padding: 2.5rem; }
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #777;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+    .mobile-toggle__hamburger {
+      left: 8px; }
+    .mobile-toggle__hamburger, .mobile-toggle__hamburger::before, .mobile-toggle__hamburger::after {
+      position: absolute;
+      content: "";
+      width: 28px;
+      height: 2.5px;
+      background: #fafafa;
+      border-radius: 20px;
+      transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
+    .mobile-toggle__hamburger::before {
+      top: -8px; }
+    .mobile-toggle__hamburger::after {
+      top: 8px; }
+  .open-animate {
+    animation: openAnimateMobile .7s ease; }
+  .close-animate {
+    animation: closeAnimateMobile .7s ease; }
+  .mobile-toggle--active > .mobile-toggle__hamburger {
+    background-color: transparent; }
+  .mobile-toggle--active > .mobile-toggle__hamburger::before {
+    top: 0;
+    transform: rotate(45deg); }
+  .mobile-toggle--active > .mobile-toggle__hamburger::after {
+    top: 0;
+    transform: rotate(-45deg); }
   .sidebar-mobile--active {
-    display: block; } }
+    opacity: 1; } }
 
 .wp-block-image figure {
   margin-top: 2rem; }
@@ -1501,3 +1537,19 @@ ul {
     .wp-block-image .alignright img {
       width: 100%;
       height: auto; } }
+
+@keyframes openAnimateMobile {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes closeAnimateMobile {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
