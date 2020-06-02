@@ -11,6 +11,25 @@ header {
   border-radius: .5rem;
 }
 
+.aside--fixed {
+  position: fixed;
+  top: 0;
+  width: 235px;
+  flex: 0 0 235px;
+}
+
+.content--fixed {
+  margin-left: 235px;
+}
+
+.aside--active {
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+
 // Gutenberg styles
 .wp-block-image figure {
     margin-top: 2rem;
