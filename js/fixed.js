@@ -11,24 +11,34 @@ const content = document.querySelector('.content');
 const sticky = sidebar.offsetTop;
 
 // Get all list items in sidebar
-const sidebarItems = document.querySelectorAll('ul li a');
+const sidebarItems = document.querySelectorAll('.target-link');
+
+document.querySelector('.mobile-toggle').addEventListener('click', function() {
+    sidebar.classList.toggle('sidebar-mobile--active');
+});
+
+sidebarItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        sidebar.classList.remove('sidebar-mobile--active');
+    });
+});
 
 // Add the sticky class to the sidebar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function fixedSidebar() {
   if (window.pageYOffset >= sticky) {
-    sidebar.classList.add("aside--fixed");
+    sidebar.classList.add("sidebar--fixed");
     content.classList.add('content--fixed');
   } else {
-    sidebar.classList.remove("aside--fixed");
+    sidebar.classList.remove("sidebar--fixed");
     content.classList.remove('content--fixed');
   }
   // Add active class to current content section
   sidebarItems.forEach(item => {
     let refElement = document.querySelector(item.getAttribute('href'));
-    if(refElement.offsetTop <= window.pageYOffset && refElement.offsetTop + refElement.offsetHeight > window.pageYOffset) {
-        item.classList.add('aside--active');
+    if(refElement.offsetTop <= window.pageYOffset && refElement.offsetTop + refElement.offsetHeight > window.pageYOffset && refElement.getAttribute('id') !== 'about') {
+        item.classList.add('sidebar--active');
     } else {
-        item.classList.remove('aside--active');
+        item.classList.remove('sidebar--active');
     }
   });
 }

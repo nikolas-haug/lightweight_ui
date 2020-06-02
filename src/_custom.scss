@@ -11,23 +11,52 @@ header {
   border-radius: .5rem;
 }
 
-.aside--fixed {
+.sidebar--fixed {
   position: fixed;
   top: 0;
-  width: 235px;
-  flex: 0 0 235px;
 }
 
 .content--fixed {
   margin-left: 235px;
+  @media only screen and (max-width: $small) {
+    margin-left: 0;
+  }
 }
 
-.aside--active {
+.sidebar--active {
   color: red;
+}
+
+.mobile-toggle {
+  display: none;
 }
 
 ul {
   list-style: none;
+}
+
+@media only screen and (max-width: $small) {
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color: green;
+    width: 100%;
+  }
+
+  .mobile-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background-color: orange;
+    padding: 2.5rem;
+  }
+
+  .sidebar-mobile--active {
+    display: block;
+  }
 }
 
 // Gutenberg styles
