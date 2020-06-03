@@ -1,31 +1,22 @@
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {fixedSidebar()};
-
 // Get the navbar
 const sidebar = document.querySelector('.sidebar');
-
 // Get the content
 const content = document.querySelector('.content');
-
 // Get the offset position of the sidebar
 const sticky = sidebar.offsetTop;
-
 // Get all list items in sidebar
 const sidebarItems = document.querySelectorAll('.target-link');
-
 // Get the mobile toggle button
 const mobileToggle = document.querySelector('.mobile-toggle');
-
 // Get the mobile hamburger
 const mobileHamburger = document.querySelector('.mobile-toggle > .mobile-toggle__hamburger');
 
-document.querySelector('.mobile-toggle').addEventListener('click', function(e) {
+mobileToggle.addEventListener('click', function(e) {
     sidebar.classList.toggle('sidebar-mobile--active');
-
-    mobileToggle.classList.toggle('mobile-toggle--active');
-
+    this.classList.toggle('mobile-toggle--active');
     toggleAnimation();
-
 });
 
 mobileToggle.addEventListener('transitionend', function(e) {
@@ -50,14 +41,18 @@ function fixedSidebar() {
     content.classList.remove('content--fixed');
   }
   // Add active class to current content section
-  sidebarItems.forEach(item => {
-    let refElement = document.querySelector(item.getAttribute('href'));
-    if(refElement.offsetTop <= window.pageYOffset && refElement.offsetTop + refElement.offsetHeight > window.pageYOffset && refElement.getAttribute('id') !== 'about') {
-        item.classList.add('sidebar--active');
-    } else {
-        item.classList.remove('sidebar--active');
-    }
-  });
+  activeListItem();
+}
+
+function activeListItem() {
+    sidebarItems.forEach(item => {
+        let refElement = document.querySelector(item.getAttribute('href'));
+        if(refElement.offsetTop <= window.pageYOffset && refElement.offsetTop + refElement.offsetHeight > window.pageYOffset && refElement.getAttribute('id') !== 'about') {
+            item.classList.add('sidebar--active');
+        } else {
+            item.classList.remove('sidebar--active');
+        }
+    });
 }
 
 function toggleAnimation() {

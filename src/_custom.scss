@@ -67,6 +67,7 @@ footer {
     align-items: center;
     background: #777;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    transition: all .4s ease-out;
 
     &__hamburger {
       left: 8px;
@@ -99,6 +100,11 @@ footer {
   .close-animate {
     animation: closeAnimateMobile .7s ease;
   }
+
+  .mobile-toggle--active {
+    background: #eee;
+    box-shadow: none;
+  }
   
   .mobile-toggle--active > .mobile-toggle__hamburger {
     background-color: transparent;
@@ -107,11 +113,13 @@ footer {
   .mobile-toggle--active > .mobile-toggle__hamburger::before {
     top: 0;
     transform: rotate(45deg);
+    background: #444;
   }
 
   .mobile-toggle--active > .mobile-toggle__hamburger::after {
     top: 0;
     transform: rotate(-45deg);
+    background: #444;
   }
 
   .sidebar-mobile--active {

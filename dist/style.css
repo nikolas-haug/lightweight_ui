@@ -809,7 +809,7 @@ textarea.is-success:active {
 pre {
   border: 0;
   border-radius: 4px;
-  background: transparent;
+  background: #e5e5e5;
   padding: 1rem;
   tab-size: 2;
   color: #4c4c4c;
@@ -836,7 +836,7 @@ kbd {
 
 :not(pre) > code {
   color: #4c4c4c;
-  background: transparent;
+  background: #e5e5e5;
   font-family: Menlo, monospace;
   font-size: 14px;
   padding: 0 0.2rem;
@@ -1499,7 +1499,8 @@ footer {
     display: flex;
     align-items: center;
     background: #777;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    transition: all .4s ease-out; }
     .mobile-toggle__hamburger {
       left: 8px; }
     .mobile-toggle__hamburger, .mobile-toggle__hamburger::before, .mobile-toggle__hamburger::after {
@@ -1518,14 +1519,19 @@ footer {
     animation: openAnimateMobile .7s ease; }
   .close-animate {
     animation: closeAnimateMobile .7s ease; }
+  .mobile-toggle--active {
+    background: #eee;
+    box-shadow: none; }
   .mobile-toggle--active > .mobile-toggle__hamburger {
     background-color: transparent; }
   .mobile-toggle--active > .mobile-toggle__hamburger::before {
     top: 0;
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    background: #444; }
   .mobile-toggle--active > .mobile-toggle__hamburger::after {
     top: 0;
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    background: #444; }
   .sidebar-mobile--active {
     visibility: initial;
     opacity: 1; } }
