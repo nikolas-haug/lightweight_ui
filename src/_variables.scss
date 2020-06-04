@@ -143,7 +143,8 @@ $buttons: (".button, a.button, button, [type=submit], [type=reset], [type=button
 $forms: (
   "[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
 );
-$input-background: #f2f2f2;
+$input-background: $color-grey-light;
+$input-color: $color-grey-dark;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid $border-color;
 $form-border-hover: 1px solid darken($border-color, 10%);
@@ -158,7 +159,7 @@ $error: red;
 
 $button-background-color: $color-secondary;
 $button-background-hover: darken($button-background-color, 10%);
-$button-color: $color-white; 
+$button-color: $color-grey-light; 
 $button-font-weight: 600;
 $button-font-family: "Roboto", "Arial", sans-serif;
 $button-font-size: $font-size-primary;
