@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>banana frontend</title>
+    <title>pineapple frontend</title>
+    <link rel="stylesheet" href="prism.css">
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
@@ -22,6 +23,7 @@
                     <ul>
                         <li><a href="#about" class="target-link">About</a></li>
                         <li><a href="#start" class="target-link">Getting Started</a></li>
+                        <li><a href="#containers" class="target-link">Containers</a></li>
                         <li><a href="#second" class="target-link">second</a></li>
                         <li><a href="#third" class="target-link">third</a></li>
                     </ul>
@@ -39,14 +41,58 @@
                     </div>
                     <div id="start">
                         <h4>Getting Started</h4>
-                        <pre>&lt;h1&gt;h1&lt;/h1&gt;</pre>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea ad non, consequatur, reprehenderit, odio officia quisquam labore dignissimos illo ipsam esse? Ducimus quo id accusamus delectus nulla cum cumque consectetur.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ratione animi fuga, distinctio exercitationem iste, id nobis fugiat quod illum iure repellat labore et! Provident illo ducimus tenetur ex quisquam.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse ullam laudantium quia ad vitae fugiat, officiis aliquid autem, temporibus tenetur cumque maiores odit quisquam placeat minus saepe maxime illum?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolore sint tempora illo velit animi eius unde nostrum dolorum cum, fugiat tenetur quos voluptatibus. Reiciendis vero numquam nam iure impedit?</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, nam quam? Voluptas fugiat enim consectetur a, molestiae aut dicta nihil. Atque dolor ducimus numquam et, corporis doloremque cupiditate ad cumque?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea ad non, consequatur, reprehenderit, odio officia quisquam labore dignissimos illo ipsam esse? Ducimus quo id accusamus delectus nulla cum cumque consectetur.</p>
+                        <p>The <code class="language-sass">variables.scss</code> file is where to define the global styles for the project.</p>
+                        <p>Using the npm scripts with <code class="language-markup">node-sass</code> the Sass files are prefixed and compiled.</p>
+                        <pre class="line-numbers"><code class="language-javascript">"scripts": {
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver dev",
+    "dev": "node-sass ./main.scss ./dist/style.css -w",
+    "build": "node-sass ./main.scss ./dist/style.css --output-style compressed",
+    "prefix": "postcss --use autoprefixer -b 'last 5 versions' dist/style.css -o dist/style.prefix.css",
+    "compress": "node-sass dist/style.prefix.css dist/style.min.css --output-style compressed",
+    "build:all": "npm-run-all build prefix compress"
+},</code></pre>
+                    </div>
+                    <div id="containers">
+                        <h4>Containers</h4>
+                        <p>There are four container sizes. The container variables set the four default breakpoint widths.
+                            <pre class="line-numbers"><code class="language-sass">$x-small: 480px;
+$small: 750px;
+$medium: 992px;
+$large: 1200px;
+
+// Sets the width of the containers
+$container-gutter: 0.95;</code></pre>
+                        <p>Using mixins, the container gutters are calcualted using the set widths and the gutter variable. </p>
+                            <pre class="line-numbers"><code class="language-css">@mixin container-size($size, $gutter) {
+    max-width: calc(#{$size} * #{$gutter}); 
+}
+                                </code></pre>
+                            <pre class="line-numbers"><code class="language-scss">// MAIN CONTAINER BREAKPOINTS 
+
+@include x-small-breakpoint {
+    .container {
+    @include container-size($x-small, $container-gutter);
+    }
+}
+
+@include small-breakpoint {
+    .container {
+    @include container-size($small, $container-gutter);
+    }
+}
+
+@include medium-breakpoint {
+    .container {
+    @include container-size($medium, $container-gutter);
+    }
+}
+
+@include large-breakpoint {
+    .container {
+    @include container-size($large, $container-gutter);
+    }
+}</code></pre>
                     </div>
                     <div id="second">
                         <h4>Second</h4>
@@ -84,6 +130,7 @@
         <p>&copy; 2020</p>
     </footer>
     
+    <script src="prism.js"></script>
     <script src="js/fixed.js"></script>
 </body>
 </html>
