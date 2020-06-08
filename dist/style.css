@@ -1492,6 +1492,7 @@ footer {
   .sidebar {
     position: fixed;
     top: 0;
+    z-index: 999;
     visibility: hidden;
     opacity: 0;
     background-color: #eee;
@@ -1501,7 +1502,7 @@ footer {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 9999;
     height: 44px;
     width: 44px;
     border-radius: 50%;
