@@ -19,19 +19,18 @@
             <div class="row">
                 <div class="mobile-toggle"><span class="mobile-toggle__hamburger"></span></div>
                 <aside class="col-med-3 sidebar">
-                    <h3>Navigation</h3>
+                    <h3>Navigation 🍍</h3>
                     <ul>
                         <li><a href="#about" class="target-link">About</a></li>
                         <li><a href="#start" class="target-link">Work Flow</a></li>
                         <li><a href="#containers" class="target-link">Containers</a></li>
-                        <li><a href="#second" class="target-link">second</a></li>
-                        <li><a href="#third" class="target-link">third</a></li>
+                        <li><a href="#layout" class="target-link">Layout</a></li>
                     </ul>
                 </aside>
                 
                 <main class="col-med-9 col-12 content">  
                     <div id="about">
-                        <h2>About</h2>
+                        <h2 class="section-heading">About</h2>
                         <p>Pineapple Frontend is a lightweight CSS/SASS framework with simple components and a fully customizable flexbox grid system. It also includes several lightweight Javascript componenets that are fully compatible with Wordpress custom themes.</p>
                         <p>Inspiration and credit for this design goes to:</p>
                         <ul>
@@ -40,10 +39,10 @@
                         </ul>
                     </div>
                     <div id="start">
-                        <h4>Work Flow</h4>
+                        <h2 class="section-heading">Work Flow</h2>
                         <p>Download the <a href="#">framework folder</a> and then run <code class="language-markup">npm i</code> from the command line. After modules are installed, in the root of your project, run <code class="language-markup">npm run start</code> to start the local live server. <code class="language-markup">node-sass</code> will watch for changes to the source files.</p>
                         <p>Using the npm scripts with <code class="language-markup">node-sass</code> the Sass files are prefixed and compiled.</p>
-                        <pre class="line-numbers"><code class="language-javascript">"scripts": {
+                        <pre><code class="language-javascript">"scripts": {
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver dev",
     "dev": "node-sass ./main.scss ./dist/style.css -w",
@@ -52,24 +51,33 @@
     "compress": "node-sass dist/style.prefix.css dist/style.min.css --output-style compressed",
     "build:all": "npm-run-all build prefix compress"
 },</code></pre>
-                    <p>The <code class="language-markup">variables.scss</code> file is where to define the global styles for the project.</p>
+                    <p>The <code class="language-markup">variables.scss</code> file is where to define the global styles for the project. The base font size adjusts the root default, and all widths, heights, font-sizes, etc are set using rems, where <code class="language-markup">1rem</code> is equal to <code class="language-markup">10px</code>.</p>
+                    <pre><code class="language-scss">//=====================================================
+// TYPOGRAPHY
+//=====================================================
+
+// Set the default to 1rem size for browser window resize
+$base-font-size: 62.5%;
+$base-line-height: 1.6;
+
+$font-size-primary: 1.6rem;</code></pre>
                     </div>
                     <div id="containers">
-                        <h4>Containers</h4>
+                        <h2 class="section-heading">Containers</h2>
                         <p>There are four container sizes. The container variables set the four default breakpoint widths.
-                            <pre class="line-numbers"><code class="language-sass">$x-small: 480px;
+                            <pre><code class="language-sass">$x-small: 480px;
 $small: 750px;
 $medium: 992px;
 $large: 1200px;
 
 // Sets the width of the containers
 $container-gutter: 0.95;</code></pre>
-                        <p>Using mixins, the container gutters are calcualted using the defined widths and the container gutter variable. </p>
-                            <pre class="line-numbers"><code class="language-css">@mixin container-size($size, $gutter) {
+                        <p>In <code class="language-markup">mixins.scss</code>, the container gutters are calcualted using the defined widths and the container gutter variable.</p>
+                            <pre><code class="language-css">@mixin container-size($size, $gutter) {
     max-width: calc(#{$size} * #{$gutter}); 
 }
                                 </code></pre>
-                            <pre class="line-numbers"><code class="language-scss">// MAIN CONTAINER BREAKPOINTS 
+                            <pre><code class="language-scss">// MAIN CONTAINER BREAKPOINTS 
 
 @include x-small-breakpoint {
     .container {
@@ -95,31 +103,32 @@ $container-gutter: 0.95;</code></pre>
     }
 }</code></pre>
                     </div>
-                    <div id="second">
-                        <h4>Second</h4>
+                    <div id="layout">
+                        <h2 class="section-heading">Layout</h2>
+                        <p>The grid layout is built using Flexbox and is fully customizable. Define the number of grid columns and column padding in <code class="language-markup">variables.scss</code>.</p>
+                        <pre><code class="language-scss">//=====================================================
+// GRID
+//=====================================================
 
-                        <h1>Heading 1</h1>
-                        <h2>Heading 2</h2>
-                        <h3>Heading 3</h3>
-                        <h4>Heading 4</h4>
-                        <h5>Heading 5</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
+// Controls the number of columns for the layout
+$grid-columns: 12;
+$grid-column-padding: 1.5rem;</code></pre>
+                        <p>In <code class="language-markup">layout.scss</code> the columns are generated in for loops using the defined grid variable.</p>
+                        <pre><code class="language-scss">@for $i from 1 through $grid-columns {
+.col-#{$i} {
+    flex-basis: percentage($i / $grid-columns);
+    max-width: percentage($i / $grid-columns);
+}
+.col-offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+}
+}</code></pre>
+                        <p>The defined padding variable is added to all generated columns.</p>
+                        <pre><code class="language-scss">[class^="col-"] {
+    padding-right: $grid-column-padding;
+    padding-left: $grid-column-padding;
+}</code></pre>
                     </div>
-                    <div id="third">
-                        <h4>Third</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reiciendis ea necessitatibus inventore soluta quibusdam, debitis ratione, sunt est, repudiandae atque dolorem aliquam autem ad nemo sed fugit! Autem, dolor!</p>
                 </main>
             </div>
         </div>

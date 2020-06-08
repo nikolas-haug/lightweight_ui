@@ -14,6 +14,18 @@ header {
   }
 }
 
+.section-heading {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.target-link {
+  text-transform: uppercase;
+}
+
 .sidebar--fixed {
   position: fixed;
   top: 0;
