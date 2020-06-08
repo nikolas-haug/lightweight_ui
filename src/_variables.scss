@@ -8,9 +8,19 @@
 // COLOR
 //=====================================================
 
+// Github color palette
+// $color-light: #C7E48B;
+// $color-med: #7BC96F;
+// $color-dark: #209B3A;
+// $color-grey: #EAEDF0;
+
 // Grayscale first design palette
-$color-primary: #ccc;
-$color-secondary: #999;
+// $color-primary: #ccc;
+// $color-secondary: #999;
+$color-primary: #209B3A;
+$color-secondary: #7BC96F;
+
+$color-yellow: #C7E48B;
 
 $color-grey-dark: #4c4c4c;
 $color-grey-light: #dedede;
@@ -110,8 +120,8 @@ $letter-spacing-heading: 1px;
 // SPACING
 //=====================================================
 
-$margin-utility: 1rem;
-$padding-utility: 1rem;
+$margin-utility: 1.5rem;
+$padding-utility: 1.5rem;
 
 //=====================================================
 // Borders

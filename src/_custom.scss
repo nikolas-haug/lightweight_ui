@@ -4,10 +4,10 @@
 *
 */
 header {
-  background-color: $color-primary;
+  background-color: $color-yellow;
   text-align: center;
   padding: 5rem;
-  margin-top: 5rem;
+  // margin-top: 5rem;
   border-radius: .5rem;
   @media only screen and (max-width: $small) {
     margin-top: 0;
@@ -48,6 +48,13 @@ header {
 
 ul {
   list-style: none;
+}
+
+.example-col {
+  background: $color-secondary;
+  border: $borders;
+  color: $color-grey-light;
+  padding: 1.5rem 1rem;
 }
 
 footer {
