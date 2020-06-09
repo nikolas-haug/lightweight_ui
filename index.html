@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <header class="container-full">
+    <header class="container-stretch">
         <h1>pineapple frontend</h1>
     </header>
 
@@ -68,7 +68,7 @@ $font-size-primary: 1.6rem;</code></pre>
                     </div>
                     <div id="containers">
                         <h2 class="section-heading">Containers</h2>
-                        <p>There are four container sizes. The container variables set the four default breakpoint widths.
+                        <p>Define the four container sizes and the container gutter percentage in <code class="language-markup">variables.scss</code>.</p>
                             <pre><code class="language-sass">$x-small: 480px;
 $small: 750px;
 $medium: 992px;
@@ -76,11 +76,41 @@ $large: 1200px;
 
 // Sets the width of the containers
 $container-gutter: 0.95;</code></pre>
-                        <p>In <code class="language-markup">mixins.scss</code>, the container gutters are calcualted using the defined widths and the container gutter variable.</p>
+                        <p>These variables establish the four breakpoints for the project, using a mobile first approach with media queries.</p>
+                        <pre><code class="lang-scss">*
+* Media queries for a mobile first layout
+*
+*/
+
+@mixin x-small-breakpoint {
+    @media only screen and (min-width: #{$x-small}) {
+        @content;
+    }
+}
+
+@mixin small-breakpoint {
+    @media only screen and (min-width: #{$small}) {
+        @content;
+    }
+}
+
+@mixin medium-breakpoint {
+    @media only screen and (min-width: #{$medium}) {
+        @content;
+    }
+}
+
+@mixin large-breakpoint {
+    @media only screen and (min-width: #{$large}) {
+        @content;
+    }
+}</code></pre>
+                        <p>The <code class="language-scss">container-size</code> mixin takes two arguments, the size of the container and the gutter percentage.</p>
                             <pre><code class="language-css">@mixin container-size($size, $gutter) {
     max-width: calc(#{$size} * #{$gutter}); 
 }
                                 </code></pre>
+                        <p>And the container size for each breakpoint is calculated using these two variables.</p>
                             <pre><code class="language-scss">// MAIN CONTAINER BREAKPOINTS 
 
 @include x-small-breakpoint {
@@ -106,6 +136,33 @@ $container-gutter: 0.95;</code></pre>
     @include container-size($large, $container-gutter);
     }
 }</code></pre>
+                        <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin.</p>
+                        <pre><code class="language-scss">@mixin container-styles {
+    width: 100%;
+    padding-right: $container-padding;
+    padding-left: $container-padding; 
+    margin-right: auto;
+    margin-left: auto;
+}</code></pre>
+                        <h3>Fixed Container Sizes</h3>
+                        <p>Other conatiner classes set a fixed <code class="language-markup">max-width</code> at all breakpoints, defined by the container size variables set above.</p>
+                        <pre><code class="language-scss">// FIXED SIZE CONTAINERS
+
+.container-sm {
+    @include container-size($x-small, $container-gutter);
+    @include container-styles;
+}
+
+.container-med {
+    @include container-size($small, $container-gutter);
+    @include container-styles;
+}
+
+.container-lg {
+    @include container-size($medium, $container-gutter);
+    @include container-styles;
+}</code></pre>
+                        <p>If you need a container that spans the width of the entire page at all breakpoints, use the <code class="language-scss">.container-stretch</code> class.</p>
                     </div>
                     <div id="layout">
                         <h2 class="section-heading">Layout</h2>
