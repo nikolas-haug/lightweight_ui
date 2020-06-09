@@ -12,6 +12,7 @@
 
     <header class="container-stretch">
         <h1>pineapple frontend</h1>
+        <p>responsive • flexbox • lightweight</p>
     </header>
 
     <section>
@@ -31,7 +32,7 @@
                 <main class="col-med-9 col-12 content">  
                     <div id="about">
                         <h2 class="section-heading">About</h2>
-                        <p>Pineapple Frontend is a lightweight CSS/SASS framework with simple components and a fully customizable flexbox grid system. It also includes several lightweight Javascript componenets that are compatible with a Wordpress custom theme.</p>
+                        <p>Pineapple Frontend is a responsive and lightweight CSS/SASS framework with simple components and a fully customizable flexbox grid system. It also includes several lightweight Javascript componenets that are compatible with a Wordpress custom theme.</p>
                         <p>I created it in order to better understand dynamic flexbox grids using SCSS loops and mixins, particularly by following the Bootstrap Grid model, and how it generates these grids with SCSS variables and functions. I wanted to make something a little more lightweight that was simple to customize for projects of all size.</p>
                         <p>⚡️Inspiration and credit for this design and functionality:</p>
                         <ul>
@@ -166,7 +167,7 @@ $container-gutter: 0.95;</code></pre>
                     </div>
                     <div id="layout">
                         <h2 class="section-heading">Layout</h2>
-                        <p>The grid layout is built using Flexbox and is fully customizable. Define the number of grid columns and column padding in <code class="language-markup">variables.scss</code>.</p>
+                        <p>The grid layout is built using Flexbox and is fully customizable. Define the number of grid columns and individual column padding in <code class="language-markup">variables.scss</code>.</p>
                         <pre><code class="language-scss">//=====================================================
 // GRID
 //=====================================================
@@ -174,7 +175,7 @@ $container-gutter: 0.95;</code></pre>
 // Controls the number of columns for the layout
 $grid-columns: 12;
 $grid-column-padding: 1.5rem;</code></pre>
-                        <p>In <code class="language-markup">layout.scss</code> the columns are generated in for loops using the defined grid variable.</p>
+                        <p>Separate for loops generate the grid for all breakpoints in <code class="language-markup">layout.scss</code> using the defined <code class="language-markup">$grid-columns</code> variable.</p> 
                         <pre><code class="language-scss">@for $i from 1 through $grid-columns {
     .col-#{$i} {
         flex-basis: percentage($i / $grid-columns);
@@ -184,29 +185,44 @@ $grid-column-padding: 1.5rem;</code></pre>
         margin-left: percentage($i / $grid-columns);
     }
 }</code></pre>
-                        <p>The defined padding variable is added to all generated columns.</p>
+                        <p>Another mixin <code class="language-markup">@col-x-list</code> adds the defined <code class="language-markup">$grid-column-padding</code> styles to all generated columns.</p>
+                        <pre><code class="language-scss">%col-styles {
+    position: relative;
+    width: 100%;
+    padding-right: $grid-column-padding;
+    padding-left: $grid-column-padding;
+}
+
+@mixin col-x-list {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}, .col-sm-#{$i}, .col-med-#{$i}, .col-lg-#{$i}, .col-sm, .col-med, .col-lg { @extend %col-styles; }
+}
+}
+
+@include col-x-list;</code></pre>
+                        <h3>Examples</h3>
                         <pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-4&quot;&gt;
+        &lt;div class=&quot;col-med&quot;&gt;
             col 1 of 4
         &lt;/div&gt;
-        &lt;div class=&quot;col-4&quot;&gt;
+        &lt;div class=&quot;col-med&quot;&gt;
             col 1 of 4
         &lt;/div&gt;
-        &lt;div class=&quot;col-4&quot;&gt;
+        &lt;div class=&quot;col-med&quot;&gt;
             col 1 of 4
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         <div class="container-stretch padding-bottom">
                             <div class="row text-center">
-                                <div class="col-lg example-col">
+                                <div class="col-med example-col">
                                     col 1 of 3
                                 </div>
-                                <div class="col-lg example-col">
+                                <div class="col-med example-col">
                                     col 1 of 3
                                 </div>
-                                <div class="col-lg example-col">
+                                <div class="col-med example-col">
                                     col 1 of 3
                                 </div>
                             </div>
@@ -217,7 +233,7 @@ $grid-column-padding: 1.5rem;</code></pre>
         </div>
     </section>
 
-    <footer class="container-lg text-center">
+    <footer class="container-stretch text-center">
         <h3>footer</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius soluta veritatis omnis amet illum quibusdam recusandae iste repudiandae modi non earum officia rerum vero voluptate, eos temporibus cum dolor molestiae?</p>
         <p>&copy; 2020</p>

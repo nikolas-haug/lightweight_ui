@@ -1642,8 +1642,9 @@ ul {
   padding: 1.5rem 1rem; }
 
 footer {
+  margin-top: 3rem;
   padding: 2.5rem 0;
-  border-top: 1px solid #38453b; }
+  border-top: 1px solid #C7E48B; }
 
 @media only screen and (max-width: 750px) {
   .sidebar {
