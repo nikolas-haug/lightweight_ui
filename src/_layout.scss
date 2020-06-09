@@ -83,7 +83,7 @@
 
 @mixin col-x-list {
   @for $i from 1 through $grid-columns {
-      .col-#{$i}, .col-sm-#{$i}, .col-med-#{$i}, .col-lg-#{$i}, .col-sm-auto, .col-med-auto, .col-lg-auto { @extend %col-styles; }
+      .col-#{$i}, .col-sm-#{$i}, .col-med-#{$i}, .col-lg-#{$i}, .col-sm, .col-med, .col-lg { @extend %col-styles; }
   }
 }
 
@@ -105,14 +105,6 @@
   padding-left: 0;
 }
 
-.col {
-  flex-grow: 1;
-  flex-basis: auto;
-  max-width: 100%;
-  padding-right: $grid-column-padding;
-  padding-left: $grid-column-padding;
-}
-
 @for $i from 1 through $grid-columns {
   .row-cols-#{$i} {
     @include row-cols($i);
@@ -132,16 +124,13 @@
 // Between x-small and small breakpoints
 @include x-small-breakpoint {
 
+  // Auto-sized columns
   .col-sm {
-    flex-grow: 1;
-    flex-basis: auto;
-    max-width: 100%;
-  }
-
-  // Equal auto sized columns 
-  .col-sm-auto {
-    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
     flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -178,16 +167,13 @@
 // Between small and medium breakpoints
 @include small-breakpoint {
 
+  // Auto-sized columns
   .col-med {
-    flex-grow: 1;
-    flex-basis: auto;
-    max-width: 100%;
-  }
-
-  // Equal auto sized columns
-  .col-med-auto {
-    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
     flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -224,16 +210,13 @@
 // Between medium and large breakpoints
 @include medium-breakpoint {
 
+  // Auto-sized columns
   .col-lg {
-    flex-grow: 1;
-    flex-basis: auto;
-    max-width: 100%;
-  }
-
-  // Equal auto sized columns
-  .col-lg-auto {
-    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
     flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
