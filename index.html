@@ -31,9 +31,9 @@
                 <main class="col-med-9 col-12 content">  
                     <div id="about">
                         <h2 class="section-heading">About</h2>
-                        <p>Pineapple Frontend is a lightweight CSS/SASS framework with simple components and a fully customizable flexbox grid system. It also includes several lightweight Javascript componenets that are fully compatible with Wordpress custom themes.</p>
-                        <p>It was created in order to better understand dynamic flexbox grids using SCSS loops and mixins, particularly following the way the Bootstrap framework generates them with SCSS variables and functions. I wanted to make something a little more lightweight that was simple to customize for small to medium sized projects.</p>
-                        <p>Inspiration and credit for this design and functionality:</p>
+                        <p>Pineapple Frontend is a lightweight CSS/SASS framework with simple components and a fully customizable flexbox grid system. It also includes several lightweight Javascript componenets that are compatible with a Wordpress custom theme.</p>
+                        <p>I created it in order to better understand dynamic flexbox grids using SCSS loops and mixins, particularly following the way the Bootstrap framework generates these grids with SCSS variables and functions. I wanted to make something a little more lightweight that was simple to customize for projects of all size.</p>
+                        <p>⚡️Inspiration and credit for this design and functionality:</p>
                         <ul>
                             <li>Tania Rascia: <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive UI</a></li>
                             <li>Kristofer Joseph: <a href="https://github.com/kristoferjoseph/flexboxgrid" target="_blank">Flexbox Grid</a></li>
@@ -42,8 +42,10 @@
                     </div>
                     <div id="start">
                         <h2 class="section-heading">Work Flow</h2>
-                        <p>Download the <a href="#">framework folder</a> and then run <code class="language-markup">npm i</code> from the command line. After modules are installed, in the root of your project, run <code class="language-markup">npm run start</code> to start the local live server. <code class="language-markup">node-sass</code> will watch for changes to the source files.</p>
-                        <p>Using the npm scripts with <code class="language-markup">node-sass</code> the Sass files are prefixed and compiled.</p>
+                        <p>Download the <a href="#">framework folder</a> and then run <code class="language-markup">npm i</code> from the command line. After modules are installed, in the root of your project, run</p>
+                            <pre><code class="language-markup">npm run start</code></pre> 
+                            <p>to start the local live server. <code class="language-markup">node-sass</code> will watch for changes to the source files.</p>
+                        <p>Using the npm scripts with <code class="language-markup">node-sass</code> and plugins, the Sass files are prefixed and compiled in development and production environments.</p>
                         <pre><code class="language-javascript">"scripts": {
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver dev",
@@ -53,7 +55,7 @@
     "compress": "node-sass dist/style.prefix.css dist/style.min.css --output-style compressed",
     "build:all": "npm-run-all build prefix compress"
 },</code></pre>
-                    <p>The <code class="language-markup">variables.scss</code> file is where to define the global styles for the project. The base font size adjusts the root default, and all widths, heights, font-sizes, etc are set using rems, where <code class="language-markup">1rem</code> is equal to <code class="language-markup">10px</code>.</p>
+                    <p>Define global styles for the project in the <code class="language-markup">variables.scss</code> file . The base font size adjusts the root default, and all widths, heights, font-sizes, paddings, and margins are set using rems, where <code class="language-markup">1rem</code> is equal to <code class="language-markup">10px</code>.</p>
                     <pre><code class="language-scss">//=====================================================
 // TYPOGRAPHY
 //=====================================================
@@ -126,10 +128,6 @@ $grid-column-padding: 1.5rem;</code></pre>
     }
 }</code></pre>
                         <p>The defined padding variable is added to all generated columns.</p>
-                        <pre><code class="language-scss">[class^="col-"] {
-    padding-right: $grid-column-padding;
-    padding-left: $grid-column-padding;
-}</code></pre>
                         <pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-4&quot;&gt;
@@ -144,14 +142,14 @@ $grid-column-padding: 1.5rem;</code></pre>
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         <div class="container-stretch padding-bottom">
-                            <div class="row text-center">
-                                <div class="col-med-4 example-col">
+                            <div class="row row-cols-lg-3 row-cols-sm-2 text-center">
+                                <div class="example-col">
                                     col 1 of 3
                                 </div>
-                                <div class="col-med-4 example-col">
+                                <div class="example-col">
                                     col 1 of 3
                                 </div>
-                                <div class="col-med-4 example-col">
+                                <div class="example-col">
                                     col 1 of 3
                                 </div>
                             </div>

@@ -920,6 +920,10 @@ kbd {
   padding-right: 1.5rem;
   padding-left: 1.5rem; }
 
+[class*="row-cols-"] > * {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
