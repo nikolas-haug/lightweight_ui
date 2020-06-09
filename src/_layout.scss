@@ -74,10 +74,20 @@
   overflow: hidden;
 }
 
-[class^="col-"] {
+%col-styles {
+  position: relative;
+  width: 100%;
   padding-right: $grid-column-padding;
   padding-left: $grid-column-padding;
 }
+
+@mixin col-x-list {
+  @for $i from 1 through $grid-columns {
+      .col-#{$i}, .col-sm-#{$i}, .col-med-#{$i}, .col-lg-#{$i}, .col-sm-auto, .col-med-auto, .col-lg-auto { @extend %col-styles; }
+  }
+}
+
+@include col-x-list;
 
 .no-gutters {
   margin-right: 0;
@@ -90,22 +100,18 @@
   padding-left: 0;
 }
 
-// Mobile first - < x-small container size
-// col-#{$i} = col-xs
-
-// Equal auto sized columns 
-.col-auto {
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%;
-}
-
 .col {
   flex-grow: 1;
   flex-basis: auto;
   max-width: 100%;
   padding-right: $grid-column-padding;
   padding-left: $grid-column-padding;
+}
+
+@for $i from 1 through $grid-columns {
+  .row-cols-#{$i} {
+    @include row-cols($i);
+  }
 }
 
 @for $i from 1 through $grid-columns {
@@ -141,6 +147,12 @@
     }
     .col-sm-offset-#{$i} {
       margin-left: percentage($i / $grid-columns);
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .row-cols-sm-#{$i} {
+      @include row-cols($i);
     }
   }
 
@@ -184,6 +196,12 @@
     }
   }
 
+  @for $i from 1 through $grid-columns {
+    .row-cols-med-#{$i} {
+      @include row-cols($i);
+    }
+  }
+
   // Justify and align content
   .justify-content-med-center {
     justify-content: center;
@@ -221,6 +239,12 @@
     }
     .col-lg-offset-#{$i} {
       margin-left: percentage($i / $grid-columns);
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .row-cols-lg-#{$i} {
+      @include row-cols($i);
     }
   }
 

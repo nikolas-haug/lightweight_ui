@@ -22,8 +22,10 @@ $color-secondary: #7BC96F;
 
 $color-yellow: #C7E48B;
 
-$color-grey-dark: #4c4c4c;
-$color-grey-light: #dedede;
+$color-grey-dark: #38453b;
+$color-grey-light: #f9faf9;
+// $color-grey-dark: #4c4c4c;
+// $color-grey-light: #dedede;
 
 // Basic
 $color-white: #fff;
@@ -33,7 +35,7 @@ $color-link: $color-secondary;
 $color-link-hover: darken($color-link, 10%);
 
 // Global
-$global-background-color: $color-white;
+$global-background-color: $color-grey-light;
 
 // Buttons
 $accent-color: $color-primary;

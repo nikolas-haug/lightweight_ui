@@ -4,11 +4,17 @@
 *
 */
 header {
-  background-color: $color-yellow;
+  background-color: $color-primary;
+  text-transform: uppercase;
   text-align: center;
   padding: 5rem;
   // margin-top: 5rem;
   border-radius: .5rem;
+  h1 {
+    color: $color-grey-light;
+    font-weight: 300;
+    letter-spacing: .2rem;
+  }
   @media only screen and (max-width: $small) {
     margin-top: 0;
   }
@@ -24,6 +30,7 @@ header {
 
 .target-link {
   text-transform: uppercase;
+  color: $color-grey-dark;
 }
 
 .sidebar--fixed {
@@ -39,7 +46,7 @@ header {
 }
 
 .sidebar--active {
-  color: red;
+  color: $color-secondary;
 }
 
 .mobile-toggle {
