@@ -41,7 +41,7 @@ header {
 .sidebar--fixed {
   position: fixed;
   top: 0;
-  max-width: 25%;
+  max-width: 235px;
 }
 
 .content--fixed {
@@ -65,9 +65,10 @@ ul {
 
 .example-col {
   background: $color-secondary;
-  border: $borders;
+  // border: $borders;
   color: $color-grey-light;
   padding: 1.5rem 1rem;
+  margin: .5rem;
 }
 
 footer {

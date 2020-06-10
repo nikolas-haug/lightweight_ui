@@ -1436,16 +1436,16 @@ kbd {
   margin: 0 auto; }
 
 .margin-top-auto {
-  margin-top: auto; }
+  margin-top: auto !important; }
 
 .margin-bottom-auto {
-  margin-bottom: auto; }
+  margin-bottom: auto !important; }
 
 .margin-left-auto {
-  margin-left: auto; }
+  margin-left: auto !important; }
 
 .margin-right-auto {
-  margin-right: auto; }
+  margin-right: auto !important; }
 
 .margin-top-zero {
   margin-top: 0; }
@@ -1623,7 +1623,7 @@ header {
 .sidebar--fixed {
   position: fixed;
   top: 0;
-  max-width: 25%; }
+  max-width: 235px; }
 
 .content--fixed {
   margin-left: 25%; }
@@ -1642,9 +1642,9 @@ ul {
 
 .example-col {
   background: #7BC96F;
-  border: 1px solid #38453b;
   color: #f9faf9;
-  padding: 1.5rem 1rem; }
+  padding: 1.5rem 1rem;
+  margin: .5rem; }
 
 footer {
   margin-top: 3rem;
