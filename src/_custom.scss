@@ -41,11 +41,11 @@ header {
 .sidebar--fixed {
   position: fixed;
   top: 0;
-  max-width: 235px;
+  max-width: 25%;
 }
 
 .content--fixed {
-  margin-left: 235px;
+  margin-left: 25%;
   @media only screen and (max-width: $small) {
     margin-left: 0;
   }
