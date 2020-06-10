@@ -27,13 +27,21 @@ header {
 }
 
 .target-link {
+  padding: .5rem 0;
   text-transform: uppercase;
   color: $color-grey-dark;
+}
+
+.sidebar {
+  h3 {
+    padding-top: 2rem;
+  }
 }
 
 .sidebar--fixed {
   position: fixed;
   top: 0;
+  max-width: 235px;
 }
 
 .content--fixed {
@@ -76,7 +84,7 @@ footer {
     visibility: hidden;
     opacity: 0;
     background-color: #eee;
-    width: 100%;
+    max-width: 100%;
     transition: all .3s;
   }
 
