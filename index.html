@@ -38,7 +38,7 @@
                         <ul>
                             <li>Tania Rascia: <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive UI</a></li>
                             <li>Kristofer Joseph: <a href="https://github.com/kristoferjoseph/flexboxgrid" target="_blank">Flexbox Grid</a></li>
-                            <li>Bootstrap: <a href="https://getbootstrap.com/docs/4.5/layout/overview/">Grid System</a></li>
+                            <li>Bootstrap: <a href="https://getbootstrap.com/docs/4.5/layout/overview/" target="_blank">Grid System</a></li>
                         </ul>
                     </div>
                     <div id="start">
@@ -200,7 +200,9 @@ $grid-column-padding: 1.5rem;</code></pre>
 }
 
 @include col-x-list;</code></pre>
-                        <h3>Examples</h3>
+                        <h3>In Practice</h3>
+                        <p>To implement the generated grid, select a <code class="language-markup">container</code> type with a nested <code class="language-markup">row</code>. Rows are set to <code class="language-css">display: flex</code> and columns added to rows are flex items. <code class="language-markup">flex-basis</code> and <code class="language-markup">max-width</code> of each flex item is determined in the <code class="language-markup">col</code> class container size and/or column number appendices.</p>
+                        <h4 class="example__heading">Simple example:</h4>
                         <pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-med&quot;&gt;
@@ -214,65 +216,39 @@ $grid-column-padding: 1.5rem;</code></pre>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                        <div class="container-stretch padding-bottom">
-                            <div class="row text-center">
-                                <div class="col-med example-col">
-                                    col 1 of 3
+                        <div class="row text-center">
+                            <div class="col-med">
+                                <div class="example__col example__col--no-margin">
+                                    col 1 of 2
                                 </div>
-                                <div class="col-med example-col">
-                                    col 1 of 3
-                                </div>
-                                <div class="col-med example-col">
-                                    col 1 of 3
+                            </div>
+                            <div class="col-med">
+                                <div class="example__col example__col--no-margin">
+                                    col 1 of 2
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <div class="container-stretch padding-bottom">
-                            <div class="row text-center">
-                                <div class="col-sm-2 example-col">
-                                    col 1 of 3
-                                </div>
-                                <div class="col-sm example-col">
-                                    col 1 of 3
-                                </div>
-                                <div class="col-sm-2 example-col">
-                                    col 1 of 3
-                                </div>
+
+                        <!-- <div class="row--margins">
+                            <div class="col-med-6">
+                                col
                             </div>
-                        </div>
-                        <br>
-                        <div class="container-stretch padding-bottom">
-                            <div class="row text-center">
-                                <div class="col-sm-offset-2 example-col">
-                                    col 1 of 3
-                                </div>
-                                <div class="col-sm example-col">
-                                    col 1 of 3
-                                </div>
+                            <div class="col-med-6">
+                                col
                             </div>
-                        </div>
-                        <br>
-                        <div class="container-stretch padding-bottom">
-                            <div class="row text-center">
-                                <div class="col-med-4 example-col">
-                                    col 1 of 3
-                                </div>
-                                <div class="col-med-4 margin-left-auto example-col">
-                                    col 1 of 3
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
+
                     </div>
                 </main>
             </div>
         </div>
     </section>
 
-    <footer class="container-stretch text-center">
-        <h3>footer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius soluta veritatis omnis amet illum quibusdam recusandae iste repudiandae modi non earum officia rerum vero voluptate, eos temporibus cum dolor molestiae?</p>
-        <p>&copy; 2020</p>
+    <footer class="text-center">
+        <div class="container-med">
+            <h3>footer</h3>
+            <p>&copy; 2020</p>
+        </div>
     </footer>
     
     <script src="prism.js"></script>

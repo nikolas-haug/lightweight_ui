@@ -63,18 +63,31 @@ ul {
   list-style: none;
 }
 
-.example-col {
-  background: $color-secondary;
-  // border: $borders;
-  color: $color-grey-light;
-  padding: 1.5rem 1rem;
-  margin: .5rem;
+.example__heading {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.example__col {
+    background: $color-secondary;
+    color: $color-grey-light;
+    padding: 1.5rem 1rem;
+
+    &--no-margin {
+      border: $borders;
+      padding: 1.5rem 0;
+    }
+
+    &--margin {
+      margin: .5rem 0;
+    }
 }
 
 footer {
   margin-top: 3rem;
   padding: 2.5rem 0;
-  border-top: 1px solid $color-yellow;
+  // border-top: 1px solid $color-tertiary;
+  background-color: $color-tertiary;
 }
 
 @media only screen and (max-width: $small) {
@@ -84,7 +97,7 @@ footer {
     z-index: 999;
     visibility: hidden;
     opacity: 0;
-    background-color: #eee;
+    background-color: $color-tertiary;
     max-width: 100%;
     transition: all .3s;
   }

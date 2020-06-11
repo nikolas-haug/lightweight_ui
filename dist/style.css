@@ -1640,16 +1640,24 @@ header {
 ul {
   list-style: none; }
 
-.example-col {
+.example__heading {
+  text-transform: uppercase;
+  font-weight: 300; }
+
+.example__col {
   background: #7BC96F;
   color: #f9faf9;
-  padding: 1.5rem 1rem;
-  margin: .5rem; }
+  padding: 1.5rem 1rem; }
+  .example__col--no-margin {
+    border: 1px solid #38453b;
+    padding: 1.5rem 0; }
+  .example__col--margin {
+    margin: .5rem 0; }
 
 footer {
   margin-top: 3rem;
   padding: 2.5rem 0;
-  border-top: 1px solid #C7E48B; }
+  background-color: #E8E51A; }
 
 @media only screen and (max-width: 850px) {
   .sidebar {
@@ -1658,7 +1666,7 @@ footer {
     z-index: 999;
     visibility: hidden;
     opacity: 0;
-    background-color: #eee;
+    background-color: #E8E51A;
     max-width: 100%;
     transition: all .3s; }
   .mobile-toggle {
