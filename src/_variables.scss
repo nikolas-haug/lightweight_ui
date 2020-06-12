@@ -70,6 +70,9 @@ $container-gutter: 0.95;
 $grid-columns: 12;
 $grid-column-padding: 1.5rem;
 
+// Custom col padding and negative row margins should match
+$grid-column-padding-custom: .5rem;
+
 // Rows
 $row-gallery-height: 20rem;
 

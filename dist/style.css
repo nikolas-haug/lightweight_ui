@@ -933,6 +933,14 @@ kbd {
   padding-right: 0;
   padding-left: 0; }
 
+.row-custom {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem; }
+
+.row-custom > [class*="col-"] {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important; }
+
 .row-cols-1 > * {
   flex: 0 0 100%;
   max-width: 100%; }
