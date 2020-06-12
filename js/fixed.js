@@ -1,5 +1,8 @@
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {fixedSidebar()};
+window.onscroll = function() {
+    fixedSidebar();
+    animateHamburger();
+};
 // Get the navbar
 const sidebar = document.querySelector('.sidebar');
 // Get the content
@@ -64,3 +67,24 @@ function toggleAnimation() {
         mobileHamburger.classList.remove('close-animate');
     }
 }
+
+function animateHamburger() {
+    console.log(window.pageYOffset);
+    if(window.pageYOffset >= 100) {
+        mobileToggle.classList.add('mobile-toggle--scrolled');
+    } else {
+        mobileToggle.classList.remove('mobile-toggle--scrolled');
+    }
+}
+
+//for animated navbar on scroll
+// $(window).scroll(function () {
+//     // Method 1: Using addClass and removeClass
+//     if ($(document).scrollTop() > 50) {
+//         $('.navbar-light').addClass('navbar-shrink');
+//     } else {
+//         $('.navbar-light').removeClass('navbar-shrink');
+//     }
+//     // Method 2: Using toggleClass
+//     // $(".navbar-light").toggleClass("navbar-shrink", $(this).scrollTop() > 50)
+// });

@@ -7,7 +7,7 @@ header {
   background-color: $color-primary;
   text-transform: uppercase;
   text-align: center;
-  padding: 5rem;
+  padding: 7rem;
   h1 {
     color: $color-grey-light;
     font-weight: 300;
@@ -113,8 +113,6 @@ footer {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: #777;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     transition: all .4s ease-out;
 
     &__hamburger {
@@ -128,7 +126,7 @@ footer {
       content: "";
       width: 28px;
       height: 2.5px;
-      background: #fafafa;
+      background: $color-grey-light;
       border-radius: 20px;
       transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
     }
@@ -149,8 +147,13 @@ footer {
     animation: closeAnimateMobile .7s ease;
   }
 
+  .mobile-toggle--scrolled {
+    background-color: $color-primary;
+    box-shadow: 0 1px 3px $color-grey-dark;
+  }
+
   .mobile-toggle--active {
-    background: #eee;
+    background: $color-grey-light;
     box-shadow: none;
   }
   
@@ -161,13 +164,13 @@ footer {
   .mobile-toggle--active > .mobile-toggle__hamburger::before {
     top: 0;
     transform: rotate(45deg);
-    background: #444;
+    background: $color-grey-dark;
   }
 
   .mobile-toggle--active > .mobile-toggle__hamburger::after {
     top: 0;
     transform: rotate(-45deg);
-    background: #444;
+    background: $color-grey-dark;
   }
 
   .sidebar-mobile--active {

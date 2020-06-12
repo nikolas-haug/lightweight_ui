@@ -1596,7 +1596,7 @@ header {
   background-color: #209B3A;
   text-transform: uppercase;
   text-align: center;
-  padding: 5rem; }
+  padding: 7rem; }
   header h1 {
     color: #f9faf9;
     font-weight: 300;
@@ -1680,8 +1680,6 @@ footer {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: #777;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     transition: all .4s ease-out; }
     .mobile-toggle__hamburger {
       left: 8px; }
@@ -1690,7 +1688,7 @@ footer {
       content: "";
       width: 28px;
       height: 2.5px;
-      background: #fafafa;
+      background: #f9faf9;
       border-radius: 20px;
       transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
     .mobile-toggle__hamburger::before {
@@ -1701,19 +1699,22 @@ footer {
     animation: openAnimateMobile .7s ease; }
   .close-animate {
     animation: closeAnimateMobile .7s ease; }
+  .mobile-toggle--scrolled {
+    background-color: #209B3A;
+    box-shadow: 0 1px 3px #38453b; }
   .mobile-toggle--active {
-    background: #eee;
+    background: #f9faf9;
     box-shadow: none; }
   .mobile-toggle--active > .mobile-toggle__hamburger {
     background-color: transparent; }
   .mobile-toggle--active > .mobile-toggle__hamburger::before {
     top: 0;
     transform: rotate(45deg);
-    background: #444; }
+    background: #38453b; }
   .mobile-toggle--active > .mobile-toggle__hamburger::after {
     top: 0;
     transform: rotate(-45deg);
-    background: #444; }
+    background: #38453b; }
   .sidebar-mobile--active {
     visibility: initial;
     opacity: 1; } }
