@@ -64,8 +64,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: $row-negative-margin;
-  margin-left: $row-negative-margin;
+  margin-right: -#{$container-padding};
+  margin-left: -#{$container-padding};
 }
 
 // Clip row by height
