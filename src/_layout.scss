@@ -149,19 +149,6 @@
       @include row-cols($i);
     }
   }
-
-  // Justify and align content
-  .justify-content-sm-center {
-    justify-content: center;
-  }
-
-  .justify-content-sm-between {
-    justify-content: space-between;
-  }
-
-  .justify-content-sm-around {
-    justify-content: space-around;
-  }
 }
 
 // Between small and medium breakpoints
@@ -192,19 +179,6 @@
       @include row-cols($i);
     }
   }
-
-  // Justify and align content
-  .justify-content-med-center {
-    justify-content: center;
-  }
-
-  .justify-content-med-between {
-    justify-content: space-between;
-  }
-
-  .justify-content-med-around {
-    justify-content: space-around;
-  }
 }
 
 // Between medium and large breakpoints
@@ -234,18 +208,5 @@
     .row-cols-lg-#{$i} {
       @include row-cols($i);
     }
-  }
-
-  // Justify and align content
-  .justify-content-lg-center {
-    justify-content: center;
-  }
-
-  .justify-content-lg-between {
-    justify-content: space-between;
-  }
-
-  .justify-content-lg-around {
-    justify-content: space-around;
   }
 }

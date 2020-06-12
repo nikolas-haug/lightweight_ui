@@ -1,4 +1,4 @@
-// When the user scrolls the page, execute myFunction
+// When the user scrolls the page
 window.onscroll = function() {
     fixedSidebar();
     animateHamburger();
@@ -76,15 +76,3 @@ function animateHamburger() {
         mobileToggle.classList.remove('mobile-toggle--scrolled');
     }
 }
-
-//for animated navbar on scroll
-// $(window).scroll(function () {
-//     // Method 1: Using addClass and removeClass
-//     if ($(document).scrollTop() > 50) {
-//         $('.navbar-light').addClass('navbar-shrink');
-//     } else {
-//         $('.navbar-light').removeClass('navbar-shrink');
-//     }
-//     // Method 2: Using toggleClass
-//     // $(".navbar-light").toggleClass("navbar-shrink", $(this).scrollTop() > 50)
-// });

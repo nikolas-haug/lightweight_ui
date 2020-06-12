@@ -1168,13 +1168,7 @@ kbd {
     max-width: 9.09091%; }
   .row-cols-sm-12 > * {
     flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
-  .justify-content-sm-center {
-    justify-content: center; }
-  .justify-content-sm-between {
-    justify-content: space-between; }
-  .justify-content-sm-around {
-    justify-content: space-around; } }
+    max-width: 8.33333%; } }
 
 @media only screen and (min-width: 850px) {
   .col-med {
@@ -1279,13 +1273,7 @@ kbd {
     max-width: 9.09091%; }
   .row-cols-med-12 > * {
     flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
-  .justify-content-med-center {
-    justify-content: center; }
-  .justify-content-med-between {
-    justify-content: space-between; }
-  .justify-content-med-around {
-    justify-content: space-around; } }
+    max-width: 8.33333%; } }
 
 @media only screen and (min-width: 992px) {
   .col-lg {
@@ -1390,13 +1378,7 @@ kbd {
     max-width: 9.09091%; }
   .row-cols-lg-12 > * {
     flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
-  .justify-content-lg-center {
-    justify-content: center; }
-  .justify-content-lg-between {
-    justify-content: space-between; }
-  .justify-content-lg-around {
-    justify-content: space-around; } }
+    max-width: 8.33333%; } }
 
 /** 
 *
@@ -1551,41 +1533,59 @@ kbd {
   justify-content: center;
   align-items: center; }
 
-@media (max-width: 992px) {
-  .flex-order-sm-1 {
-    order: 1; } }
-
-@media (max-width: 480px) {
-  .pad-xs-0 {
-    padding-left: 0;
-    padding-right: 0; }
-  .mar-xs-0 {
-    margin-left: 0;
-    margin-right: 0; } }
-
-@media (max-width: 850px) {
+@media only screen and (min-width: 480px) {
   .pad-sm-0 {
     padding-left: 0;
     padding-right: 0; }
+  .pad-sm-r-0 {
+    padding-right: 0; }
+  .pad-sm-l-0 {
+    padding-left: 0; }
   .mar-sm-0 {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .justify-content-sm-center {
+    justify-content: center; }
+  .justify-content-sm-between {
+    justify-content: space-between; }
+  .justify-content-sm-around {
+    justify-content: space-around; } }
 
-@media (max-width: 992px) {
+@media only screen and (min-width: 850px) {
   .pad-med-0 {
-    padding-right: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  .pad-med-r-0 {
+    padding-right: 0; }
+  .pad-med-l-0 {
     padding-left: 0; }
   .mar-med-0 {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .justify-content-med-center {
+    justify-content: center; }
+  .justify-content-med-between {
+    justify-content: space-between; }
+  .justify-content-med-around {
+    justify-content: space-around; } }
 
-@media (max-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .pad-lg-0 {
     padding-right: 0;
     padding-left: 0; }
+  .pad-lg-r-0 {
+    padding-right: 0; }
+  .pad-lg-l-0 {
+    padding-left: 0; }
   .mar-lg-0 {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .justify-content-lg-center {
+    justify-content: center; }
+  .justify-content-lg-between {
+    justify-content: space-between; }
+  .justify-content-lg-around {
+    justify-content: space-around; } }
 
 /**
 *
@@ -1596,7 +1596,7 @@ header {
   background-color: #209B3A;
   text-transform: uppercase;
   text-align: center;
-  padding: 7rem; }
+  padding: 7rem 0; }
   header h1 {
     color: #f9faf9;
     font-weight: 300;
@@ -1654,6 +1654,12 @@ ul {
   .example__col--margin {
     margin: .5rem 0; }
 
+.test-col {
+  padding: 1.5rem;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+  margin: 1.5rem 0; }
+
 footer {
   margin-top: 3rem;
   padding: 2.5rem 0;
@@ -1690,7 +1696,7 @@ footer {
       height: 2.5px;
       background: #f9faf9;
       border-radius: 20px;
-      transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
+      transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
     .mobile-toggle__hamburger::before {
       top: -8px; }
     .mobile-toggle__hamburger::after {
@@ -1718,17 +1724,6 @@ footer {
   .sidebar-mobile--active {
     visibility: initial;
     opacity: 1; } }
-
-.wp-block-image figure {
-  margin-top: 2rem; }
-
-@media (max-width: 650px) {
-  .wp-block-image .alignright {
-    float: none;
-    margin: 0; }
-    .wp-block-image .alignright img {
-      width: 100%;
-      height: auto; } }
 
 @keyframes openAnimateMobile {
   0% {

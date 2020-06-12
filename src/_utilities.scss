@@ -208,41 +208,50 @@
     align-items: center;
 }
 
-// Flex order
-@media (max-width: $medium) {
-    .flex-order-sm-1 {
-        order: 1;
-    }
-}
-
-// No margins and paddings for different breakpoints
-@media (max-width: $x-small) {
-    .pad-xs-0 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .mar-xs-0 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: $small) {
+// No margins and paddings and content placement for different breakpoints
+@include x-small-breakpoint {
     .pad-sm-0 {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .pad-sm-r-0 {
+        padding-right: 0;
+    }
+
+    .pad-sm-l-0 {
+        padding-left: 0;
     }
 
     .mar-sm-0 {
         margin-left: 0;
         margin-right: 0;
     }
+
+    .justify-content-sm-center {
+        justify-content: center;
+    }
+
+    .justify-content-sm-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-sm-around {
+        justify-content: space-around;
+    }
 }
 
-@media (max-width: $medium) {
+@include small-breakpoint {
     .pad-med-0 {
+        padding-left: 0;
         padding-right: 0;
+    }
+
+    .pad-med-r-0 {
+        padding-right: 0;
+    }
+
+    .pad-med-l-0 {
         padding-left: 0;
     }
 
@@ -250,16 +259,49 @@
         margin-left: 0;
         margin-right: 0;
     }
+
+    .justify-content-med-center {
+        justify-content: center;
+    }
+
+    .justify-content-med-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-med-around {
+        justify-content: space-around;
+    }
 }
 
-@media (max-width: $large) {
+@include medium-breakpoint {
     .pad-lg-0 {
         padding-right: 0;
+        padding-left: 0;
+    }
+
+    .pad-lg-r-0 {
+        padding-right: 0;
+    }
+
+    .pad-lg-l-0 {
         padding-left: 0;
     }
 
     .mar-lg-0 {
         margin-left: 0;
         margin-right: 0;
+    }
+
+     // Justify and align content
+    .justify-content-lg-center {
+        justify-content: center;
+    }
+
+    .justify-content-lg-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-lg-around {
+        justify-content: space-around;
     }
 }
