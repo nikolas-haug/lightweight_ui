@@ -105,7 +105,6 @@
   padding-left: 0;
 }
 
-
 // custom spacing for cols
 .row-custom {
   margin-right: -#{$grid-column-padding-custom};
@@ -113,8 +112,8 @@
 }
   
 .row-custom > [class*="col-"] {
-  padding-right: $grid-column-padding-custom !important;
-  padding-left: $grid-column-padding-custom !important;
+  padding-right: $grid-column-padding-custom;
+  padding-left: $grid-column-padding-custom;
 }
 
 @for $i from 1 through $grid-columns {

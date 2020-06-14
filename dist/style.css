@@ -938,8 +938,8 @@ kbd {
   margin-left: -0.5rem; }
 
 .row-custom > [class*="col-"] {
-  padding-right: 0.5rem !important;
-  padding-left: 0.5rem !important; }
+  padding-right: 0.5rem;
+  padding-left: 0.5rem; }
 
 .row-cols-1 > * {
   flex: 0 0 100%;
