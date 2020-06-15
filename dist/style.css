@@ -1655,17 +1655,8 @@ ul {
 .example__col {
   background: #7BC96F;
   color: #f9faf9;
-  padding: 1.5rem 1rem; }
-  .example__col--no-margin {
-    border: 1px solid #38453b;
-    padding: 1.5rem 0; }
-  .example__col--margin {
-    margin: .5rem 0; }
-
-.test-col {
-  padding: 1.5rem;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  border: 1px solid #38453b;
+  padding: 1.5rem 1rem;
   margin: 1.5rem 0; }
 
 footer {
