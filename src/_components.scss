@@ -360,7 +360,6 @@ a.accent-button {
   &:hover,
   &:focus,
   &:active {
-    color: $accent-button-color-hover;
     border: 1px solid darken($accent-button-background-color, 10%);
     background: darken($accent-button-background-color, 10%);
   }

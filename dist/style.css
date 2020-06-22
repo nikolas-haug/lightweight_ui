@@ -619,10 +619,10 @@ blockquote {
   -webkit-appearance: none;
   display: inline-block;
   border: 1px solid #7BC96F;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   background: #7BC96F;
   color: #f9faf9;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.8rem;
   text-transform: none;
@@ -660,7 +660,6 @@ a.accent-button {
   a.accent-button:hover,
   a.accent-button:focus,
   a.accent-button:active {
-    color: #29c54a;
     border: 1px solid #17712a;
     background: #17712a; }
 
@@ -679,7 +678,7 @@ a.muted-button {
 
 .round-button,
 a.round-button {
-  border-radius: 40px; }
+  border-radius: 5rem; }
 
 .square-button,
 a.square-button {
@@ -693,7 +692,7 @@ a.full-button {
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   display: block;
   border: 1px solid #38453b;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   padding: 1rem;
   outline: none;
   background: #f9faf9;
@@ -717,7 +716,7 @@ textarea {
 
 fieldset {
   border: 1px solid #38453b;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.2rem 0; }
 
@@ -809,13 +808,13 @@ textarea.is-success:active {
 
 pre {
   border: 0;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   background: #e5e5e5;
   padding: 1rem;
   tab-size: 2;
   color: #38453b;
   font-family: Menlo, monospace;
-  font-size: 14px;
+  font-size: 1.4rem;
   margin: 0 0 1.2rem 0; }
   pre code {
     font-family: Menlo, monospace;
@@ -839,9 +838,9 @@ kbd {
   color: #38453b;
   background: #e5e5e5;
   font-family: Menlo, monospace;
-  font-size: 14px;
+  font-size: 1.4rem;
   padding: 0 0.2rem;
-  border-radius: 4px; }
+  border-radius: 0.5rem; }
 
 /**
 *
