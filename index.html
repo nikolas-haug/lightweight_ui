@@ -201,7 +201,7 @@ $grid-column-padding: 1.5rem;</code></pre>
 
 @include col-x-list;</code></pre>
                         <h3>In Practice</h3>
-                        <p>To implement the generated grid, select a <code class="language-markup">container</code> type with a nested <code class="language-markup">row</code>. Rows are set to <code class="language-css">display: flex</code> and columns added to rows are flex items. <code class="language-markup">flex-basis</code> and <code class="language-markup">max-width</code> of each flex item is determined in the <code class="language-markup">col</code> class container size and/or column number appendices.</p>
+                        <p>To implement the generated grid, select a <code class="language-markup">container</code> type with a nested <code class="language-markup">row</code>. Rows are set to <code class="language-css">display: flex</code> and columns added to rows are flex items. <code class="language-markup">flex-basis</code> and <code class="language-markup">max-width</code> of each flex item is determined in the <code class="language-markup">col</code> class breakpoint and column number appendices.</p>
                         <h4 class="example__heading">Equal width columns</h4>
                         <pre><code class="language-markup">&lt;div class=&quot;container-med&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
@@ -216,7 +216,7 @@ $grid-column-padding: 1.5rem;</code></pre>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                        <div class="container-med">
+                        <div class="container-med margin-top margin-bottom">
                             <div class="row">
                                 <div class="col-sm example__col">
                                     col-sm
@@ -240,7 +240,7 @@ $grid-column-padding: 1.5rem;</code></pre>
     col-6
 &lt;/div&gt;</code></pre>
 
-                        <div class="container-med">
+                        <div class="container-med margin-top margin-bottom">
                             <div class="row">
                                 <div class="col-6 example__col">
                                     col-6
@@ -261,7 +261,7 @@ $grid-column-padding: 1.5rem;</code></pre>
     col-med-8
 &lt;/div&gt;</code></pre>
 
-                        <div class="container-med">
+                        <div class="container-med margin-top margin-bottom">
                             <div class="row">
                                 <div class="col-med-4 example__col">
                                     col-med-4
@@ -272,6 +272,29 @@ $grid-column-padding: 1.5rem;</code></pre>
                             </div>
                         </div>
 
+                        <p>Specify column widths at all breakpoints in relation to the generated grid.</p>
+
+                        <h4 class="example__heading">Offset columns</h4>
+                        <pre><code class="language-markup">&lt;div class=&quot;col-med-4 col-med-offset-2&quot;&gt;
+    col-offset-2
+&lt;/div&gt;
+&lt;div class=&quot;col-med-3 col-med-offset-1&quot;&gt;
+    col-offset-1
+&lt;/div&gt;</code></pre>
+
+                        <div class="container-med margin-top margin-bottom">
+                            <div class="row">
+                                <div class="col-med-4 col-med-offset-2 example__col">
+                                    col-offset-2
+                                </div>
+                                <div class="col-med-3 col-med-offset-1 example__col">
+                                    col-offset-1
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Create custom grids using the <code class="language-css">.col-offset</code> class with various breakpoints and column widths.</p>
+
                     </div>
                 </main>
             </div>
@@ -280,11 +303,14 @@ $grid-column-padding: 1.5rem;</code></pre>
 
     <footer class="text-center">
         <div class="container-med">
-            <h3>footer</h3>
-            <p>&copy; 2020</p>
+            <a class="github-button" href="https://github.com/nikolas-haug/lightweight_ui" data-icon="octicon-star" data-size="large" aria-label="Star nikolas-haug/lightweight_ui on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/nikolas-haug" data-size="large" aria-label="Follow @nikolas-haug on GitHub">Follow @nikolas-haug</a>
+            <a class="github-button" href="https://github.com/nikolas-haug/lightweight_ui/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork nikolas-haug/lightweight_ui on GitHub">Fork</a>
+            <p>pineapple frontend</p>
         </div>
     </footer>
     
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="prism.js"></script>
     <script src="js/fixed.js"></script>
 </body>
