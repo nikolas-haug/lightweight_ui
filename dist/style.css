@@ -1657,7 +1657,8 @@ ul {
   color: #f9faf9;
   border: 1px solid #38453b;
   padding: 1.5rem 1rem;
-  margin: 1.5rem 0; }
+  margin: 1.5rem 0;
+  text-align: center; }
 
 footer {
   margin-top: 3rem;

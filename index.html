@@ -202,69 +202,75 @@ $grid-column-padding: 1.5rem;</code></pre>
 @include col-x-list;</code></pre>
                         <h3>In Practice</h3>
                         <p>To implement the generated grid, select a <code class="language-markup">container</code> type with a nested <code class="language-markup">row</code>. Rows are set to <code class="language-css">display: flex</code> and columns added to rows are flex items. <code class="language-markup">flex-basis</code> and <code class="language-markup">max-width</code> of each flex item is determined in the <code class="language-markup">col</code> class container size and/or column number appendices.</p>
-                        <h4 class="example__heading">Simple example:</h4>
-                        <pre><code class="language-markup">&lt;div class=&quot;container&quot;&gt;
+                        <h4 class="example__heading">Equal width columns</h4>
+                        <pre><code class="language-markup">&lt;div class=&quot;container-med&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-med&quot;&gt;
-            col 1 of 3
+        &lt;div class=&quot;col-sm&quot;&gt;
+            col-sm
         &lt;/div&gt;
-        &lt;div class=&quot;col-med&quot;&gt;
-            col 1 of 3
+        &lt;div class=&quot;col-sm&quot;&gt;
+            col-sm
         &lt;/div&gt;
-        &lt;div class=&quot;col-med&quot;&gt;
-            col 1 of 3
+        &lt;div class=&quot;col-sm&quot;&gt;
+            col-sm
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         <div class="container-med">
                             <div class="row">
                                 <div class="col-sm example__col">
-                                    col 1 of 3
+                                    col-sm
                                 </div>
                                 <div class="col-sm example__col">
-                                    col 1 of 3
+                                    col-sm
                                 </div>
                                 <div class="col-sm example__col">
-                                    col 1 of 3
+                                    col-sm
                                 </div>
                             </div>
                         </div>
-                        
-                            <div class="row">
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
-                                </div>
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
-                                </div>
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="row row-custom">
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
+                        <p>In this example, the <code class="language-markup">col-sm</code> determines the column's width in relation to other designated columns in the row. Beyond the indicated breakpoint any column is resized to <code class="language-markup">width: 100%</code>.</p>
+
+                        <h4 class="example__heading">Static column width</h4>
+                        <pre><code class="language-markup">&lt;div class=&quot;col-6&quot;&gt;
+    col-6
+&lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+    col-6
+&lt;/div&gt;</code></pre>
+
+                        <div class="container-med">
+                            <div class="row">
+                                <div class="col-6 example__col">
+                                    col-6
                                 </div>
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
-                                </div>
-                                <div class="col-med">
-                                    <div class="example__col">
-                                        col 1 of 3
-                                    </div>
+                                <div class="col-6 example__col">
+                                    col-6
                                 </div>
                             </div>
+                        </div>
+
+                        <p>Using only the <code class="language-markup">col-</code> class prefix with the indicated number of column spans, the columns will not be resized at any of the breakpoints.</p>
+
+                        <h4 class="example__heading">Custom column width</h4>
+                        <pre><code class="language-markup">&lt;div class=&quot;col-med-4&quot;&gt;
+    col-med-4
+&lt;/div&gt;
+&lt;div class=&quot;col-med-8&quot;&gt;
+    col-med-8
+&lt;/div&gt;</code></pre>
+
+                        <div class="container-med">
+                            <div class="row">
+                                <div class="col-med-4 example__col">
+                                    col-med-4
+                                </div>
+                                <div class="col-med-8 example__col">
+                                    col-med-8
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </main>
