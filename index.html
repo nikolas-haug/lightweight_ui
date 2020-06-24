@@ -294,12 +294,66 @@ $grid-column-padding: 1.5rem;</code></pre>
                         </div>
 
                         <p>Create custom grids using the <code class="language-css">.col-offset</code> class with various breakpoints and column widths.</p>
-                        <button class="muted-button">muted button</button>
-                        <button class="accent-button">accent button</button>
-                        <button>normal button</button>
-                        <button class="round-button">round button</button>
-                        <button class="square-button">square button</button>
-                        <button class="full-button">full button</button>
+                        
+                        <h4 class="example__heading">Spaced columns</h4>
+                        <pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-med-3&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-med-5&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-med-4&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row margin-top margin-bottom">
+                                <div class="col-med-3">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                                <div class="col-med-5">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                                <div class="col-med-4">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>To obtain space between columns use nested content in each column <code class="language-markup">&lt;div&gt;</code>. The negative margins on the row works with the defined column padding to generate space between defined columns.</p>
+
+                            <h4 class="example__heading">Custom column spacing</h4>
+
+                            <div class="row row-custom margin-top margin-bottom">
+                                <div class="col-med-3">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                                <div class="col-med-5">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                                <div class="col-med-4">
+                                    <div class="example__col">
+                                        spaced col
+                                    </div>
+                                </div>
+                            </div>
+
 
                     </div>
                 </main>
