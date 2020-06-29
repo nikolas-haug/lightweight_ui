@@ -64,8 +64,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -#{$container-padding};
-  margin-left: -#{$container-padding};
+  margin-right: -#{$grid-padding};
+  margin-left: -#{$grid-padding};
 }
 
 // Clip row by height
@@ -77,8 +77,8 @@
 %col-styles {
   position: relative;
   width: 100%;
-  padding-right: $grid-column-padding;
-  padding-left: $grid-column-padding;
+  padding-right: $grid-padding;
+  padding-left: $grid-padding;
 }
 
 @mixin col-x-list {

@@ -140,8 +140,8 @@ $container-gutter: 0.95;</code></pre>
                         <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin.</p>
                         <pre><code class="language-scss">@mixin container-styles {
     width: 100%;
-    padding-right: $container-padding;
-    padding-left: $container-padding; 
+    padding-right: $grid-padding;
+    padding-left: $grid-padding; 
     margin-right: auto;
     margin-left: auto;
 }</code></pre>
@@ -174,7 +174,7 @@ $container-gutter: 0.95;</code></pre>
 
 // Controls the number of columns for the layout
 $grid-columns: 12;
-$grid-column-padding: 1.5rem;</code></pre>
+$grid-padding: 1.5rem;</code></pre>
                         <p>Separate for loops generate the grid for all breakpoints in <code class="language-markup">layout.scss</code> using the defined <code class="language-markup">$grid-columns</code> variable.</p> 
                         <pre><code class="language-scss">@for $i from 1 through $grid-columns {
     .col-#{$i} {
@@ -185,12 +185,12 @@ $grid-column-padding: 1.5rem;</code></pre>
         margin-left: percentage($i / $grid-columns);
     }
 }</code></pre>
-                        <p>Another mixin <code class="language-markup">@col-x-list</code> adds the defined <code class="language-markup">$grid-column-padding</code> styles to all generated columns.</p>
+                        <p>Another mixin <code class="language-markup">@col-x-list</code> adds the defined <code class="language-markup">$grid-padding</code> styles to all generated columns.</p>
                         <pre><code class="language-scss">%col-styles {
     position: relative;
     width: 100%;
-    padding-right: $grid-column-padding;
-    padding-left: $grid-column-padding;
+    padding-right: $grid-padding;
+    padding-left: $grid-padding;
 }
 
 @mixin col-x-list {
@@ -335,19 +335,21 @@ $grid-column-padding: 1.5rem;</code></pre>
                             <p>To obtain space between columns use nested content in each column <code class="language-markup">&lt;div&gt;</code>. The negative margins on the row works with the defined column padding to generate space between  columns.</p>
 
                             <h4 class="example__heading">Custom column spacing</h4>
-                            <pre><code class="language-markup">&lt;div class=&quot;col-med-3&quot;&gt;
-    &lt;div&gt;
-        spaced col
+                            <pre><code class="language-markup">&lt;div class=&quot;row row-custom&quot;&gt;
+    &lt;div class=&quot;col-med-3&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-med-5&quot;&gt;
-    &lt;div&gt;
-        spaced col
+    &lt;div class=&quot;col-med-5&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-med-4&quot;&gt;
-    &lt;div&gt;
-        spaced col
+    &lt;div class=&quot;col-med-4&quot;&gt;
+        &lt;div&gt;
+            spaced col
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
@@ -369,7 +371,7 @@ $grid-column-padding: 1.5rem;</code></pre>
                                 </div>
                             </div>
 
-                            <p>Use the <code class="language-css">.row-custom</code> class to add custom spacing between columns. The value of the custom spacing is defined by the <code class="language-scss">$grid-column-padding-custom</code> variable.</p>
+                            <p>Use the <code class="language-css">.row-custom</code> class to add custom spacing between columns. The value of the custom spacing is defined by the <code class="language-scss">$grid-padding-custom</code> variable.</p>
 
                     </div>
                 </main>
