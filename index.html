@@ -332,9 +332,24 @@ $grid-column-padding: 1.5rem;</code></pre>
                                 </div>
                             </div>
 
-                            <p>To obtain space between columns use nested content in each column <code class="language-markup">&lt;div&gt;</code>. The negative margins on the row works with the defined column padding to generate space between defined columns.</p>
+                            <p>To obtain space between columns use nested content in each column <code class="language-markup">&lt;div&gt;</code>. The negative margins on the row works with the defined column padding to generate space between  columns.</p>
 
                             <h4 class="example__heading">Custom column spacing</h4>
+                            <pre><code class="language-markup">&lt;div class=&quot;col-med-3&quot;&gt;
+    &lt;div&gt;
+        spaced col
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-med-5&quot;&gt;
+    &lt;div&gt;
+        spaced col
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-med-4&quot;&gt;
+    &lt;div&gt;
+        spaced col
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
                             <div class="row row-custom margin-top margin-bottom">
                                 <div class="col-med-3">
@@ -354,6 +369,7 @@ $grid-column-padding: 1.5rem;</code></pre>
                                 </div>
                             </div>
 
+                            <p>Use the <code class="language-css">.row-custom</code> class to add custom spacing between columns. The value of the custom spacing is defined by the <code class="language-scss">$grid-column-padding-custom</code> variable.</p>
 
                     </div>
                 </main>
