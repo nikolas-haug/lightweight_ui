@@ -137,7 +137,7 @@ $container-gutter: 0.95;</code></pre>
     @include container-size($large, $container-gutter);
     }
 }</code></pre>
-                        <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin.</p>
+                        <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin. The <code class="language-scss">$grid-padding</code> variable defines the container padding, and the padding for all elements of the grid layout, and their respective negative margins. <a href="#layout">See more in Layout</a></p>
                         <pre><code class="language-scss">@mixin container-styles {
     width: 100%;
     padding-right: $grid-padding;

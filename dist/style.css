@@ -353,7 +353,7 @@ html {
 body {
   line-height: 1.8;
   background-color: #f9faf9;
-  font-size: 1.8rem; }
+  font-size: 1.6rem; }
 
 p,
 ol,
@@ -624,7 +624,7 @@ blockquote {
   color: #f9faf9;
   font-weight: 400;
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: none;
   padding: 1rem 1.5rem;
   margin: 0 0 1.5rem 0;
@@ -698,7 +698,7 @@ a.full-button {
   background: #f9faf9;
   color: #38453b;
   margin-bottom: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   width: 100%;
   max-width: 100%;
   line-height: 1; }
