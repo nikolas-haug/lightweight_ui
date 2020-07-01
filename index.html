@@ -43,9 +43,9 @@
                     </div>
                     <div id="start">
                         <h2 class="section-heading">Work Flow</h2>
-                        <p>Download the <a href="#">framework folder</a> and then run <code class="language-markup">npm i</code> from the command line. After modules are installed, in the root of your project, run</p>
+                        <p>Download the <a href="#">framework folder</a> and run <code class="language-markup">npm i</code> from the command line to install all necessary modules. Then, in the root of your project run</p>
                             <pre><code class="language-markup">npm run start</code></pre> 
-                            <p>to start the local live server. <code class="language-markup">node-sass</code> will watch for changes to the source files.</p>
+                            <p>This starts the local live server. <code class="language-markup">node-sass</code> will watch for changes to the source files.</p>
                         <p>Using the npm scripts with <code class="language-markup">node-sass</code> and plugins, the Sass files are prefixed and compiled in development and production environments.</p>
                         <pre><code class="language-javascript">"scripts": {
     "devserver": "live-server",
@@ -56,7 +56,9 @@
     "compress": "node-sass dist/style.prefix.css dist/style.min.css --output-style compressed",
     "build:all": "npm-run-all build prefix compress"
 },</code></pre>
-                    <p>Define global styles for the project in the <code class="language-markup">variables.scss</code> file . The base font size adjusts the root default, and all widths, heights, font-sizes, paddings, and margins are set using rems, where <code class="language-markup">1rem</code> is equal to <code class="language-markup">10px</code>.</p>
+               
+                    <h4 class="example__heading">Variable config</h4>
+                    <p>Define all global styles for the project in the <code class="language-markup">variables.scss</code> file . The base font size adjusts the root default &mdash; all widths, heights, font-sizes, paddings, and margins are set using rems, where <code class="language-markup">1rem</code> is equal to <code class="language-markup">10px</code>.</p>
                     <pre><code class="language-scss">//=====================================================
 // TYPOGRAPHY
 //=====================================================
@@ -69,7 +71,7 @@ $font-size-primary: 1.6rem;</code></pre>
                     </div>
                     <div id="containers">
                         <h2 class="section-heading">Containers</h2>
-                        <p>Define the four container sizes and the container gutter percentage in <code class="language-markup">variables.scss</code>.</p>
+                        <p>Define the four container sizes for the project and the container gutter percentage in <code class="language-markup">variables.scss</code>.</p>
                             <pre><code class="language-sass">$x-small: 480px;
 $small: 750px;
 $medium: 992px;
@@ -111,7 +113,7 @@ $container-gutter: 0.95;</code></pre>
     max-width: calc(#{$size} * #{$gutter}); 
 }
                                 </code></pre>
-                        <p>And the container size for each breakpoint is calculated using these two variables.</p>
+                        <p>The default container size for each breakpoint is calculated using these two variables.</p>
                             <pre><code class="language-scss">// MAIN CONTAINER BREAKPOINTS 
 
 @include x-small-breakpoint {
@@ -137,7 +139,7 @@ $container-gutter: 0.95;</code></pre>
     @include container-size($large, $container-gutter);
     }
 }</code></pre>
-                        <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin. The <code class="language-scss">$grid-padding</code> variable defines the container padding, and the padding for all elements of the grid layout, and their respective negative margins. <a href="#layout">See more in Layout</a></p>
+                        <p>All container styles are set with the <code class="language-markup">container-styles</code> mixin. The <code class="language-scss">$grid-padding</code> variable defines the container padding, and the padding for all elements of the grid layout, including their respective negative margins. <a href="#layout">See more in Layout</a></p>
                         <pre><code class="language-scss">@mixin container-styles {
     width: 100%;
     padding-right: $grid-padding;
