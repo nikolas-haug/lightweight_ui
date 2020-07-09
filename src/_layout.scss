@@ -6,6 +6,22 @@
 
 // CONTAINERS
 
+// $sizes: sm, med, lg;
+
+// @for $i from 1 to $grid-columns {
+//   @each $size in $sizes {
+//     .col-#{$size}-#{$i} {
+//       padding: 250px;
+//     }
+//   }
+// }
+
+// @each $size in $sizes {
+//   .col-#{$size} {
+//     margin: 500px;
+//   }
+// }
+
 .container {
   @include container-styles;
 }
