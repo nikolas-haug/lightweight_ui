@@ -1601,7 +1601,7 @@ kbd {
 */
 header {
   background-color: #209B3A;
-  padding: 4rem 0; }
+  padding: 3rem 0; }
   header h1 {
     color: #f9faf9;
     font-weight: 300;
@@ -1610,6 +1610,10 @@ header {
   @media only screen and (max-width: 850px) {
     header {
       margin-top: 0; } }
+
+.banner {
+  height: 2rem;
+  background-color: #E8E51A; }
 
 .section-heading {
   padding-top: 2rem;
