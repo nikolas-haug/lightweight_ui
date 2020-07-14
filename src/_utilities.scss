@@ -24,6 +24,10 @@
     display: inline-block;
 }
 
+.dis-flex {
+    display: flex;
+}
+
 // Display state
 .show {
     display: block;
@@ -185,7 +189,7 @@
     object-fit: cover;
 }
 
-// Justify and align content
+// Justify and align content/items
 .justify-content-center {
     justify-content: center;
 }
@@ -196,6 +200,10 @@
 
 .justify-content-around {
     justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 .align-self-center {

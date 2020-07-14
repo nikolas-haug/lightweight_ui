@@ -1406,6 +1406,9 @@ kbd {
 .dis-inline-block {
   display: inline-block; }
 
+.dis-flex {
+  display: flex; }
+
 .show {
   display: block; }
 
@@ -1531,6 +1534,9 @@ kbd {
 
 .justify-content-around {
   justify-content: space-around; }
+
+.align-items-center {
+  align-items: center; }
 
 .align-self-center {
   align-self: center; }
