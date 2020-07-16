@@ -141,20 +141,14 @@
 //===================================================
 // Secondary nav (built for wordpress dynamic menus)
 //
-// <div class="container-lg">
-//   <div class="row">
-//       <div class="col-12">
-//           <nav class="slider-menu">
-//              WP MENU BELOW
-//               <ul>
-//                   <li><a href="index.html">Welcome</a></li>
-//               </ul>
-//              END WP MENU
-//           </nav>
-//           <div class="slider-menu__toggler"><span></span></div>
-//       </div>
-//   </div>
-// </div>
+// <nav class="slider-menu">
+//    WP MENU BELOW
+//     <ul>
+//         <li><a href="index.html">Welcome</a></li>
+//     </ul>
+//    END WP MENU
+// </nav>
+// <div class="slider-menu__toggler"><span></span></div>
 //
 //===================================================
 /*
