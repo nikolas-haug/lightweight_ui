@@ -5,21 +5,21 @@
 */
 
 //===================================================
-// Main nav (built for wordpress dynamic menus)
+// Basic Navigation (built for wordpress dynamic menus)
 //
 // Use this in the template file:
 //
-//              <nav id="site-navigation" class="main-navigation">
+//  <nav id="site-navigation" class="main-navigation">
 //
-//                <!-- Optional navbar brand (need to add flex styles for this and adjust mobile button width/etc) -->
-//                <!-- <a href="#" class="navbar-brand">Brand</a> -->
+//    <!-- Optional navbar brand (need to add flex styles for this and adjust mobile button width/etc) -->
+//    <!-- <a href="#" class="navbar-brand">Brand</a> -->
 //
-//                  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false aria-label="Toggle Nav Menu">
-//                      <span class="hamburger"></span>
-//                  </button>
-//              <!-- Wordpress dynamic nav goes here -->
-//              <ul><li><a></a></li></ul>
-//              </nav>
+//      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false aria-label="Toggle Nav Menu">
+//          <span class="hamburger"></span>
+//      </button>
+//  <!-- Wordpress dynamic nav goes here -->
+//  <ul><li><a></a></li></ul>
+//  </nav>
 //
 //===================================================
 .main-navigation {
@@ -211,7 +211,7 @@
 
 /*
   * SLIDING MENU PANEL - Desktop view
-  */
+*/
 .slider-menu {
   height: 100%;
   background: $global-background-color;
