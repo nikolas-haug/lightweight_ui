@@ -1,3 +1,5 @@
+// Need to check this against other working wordpress themes (slider navigations)
+
 (function() {
 	const toggler = document.querySelector('.slider-menu__toggler');
 	const menu = document.querySelector('.slider-menu');
