@@ -41,6 +41,14 @@
     visibility: hidden;
 }
 
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-col {
+    flex-direction: column;
+}
+
 // Floats
 .float-left {
     float: left;
