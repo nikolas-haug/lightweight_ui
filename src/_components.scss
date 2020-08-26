@@ -534,6 +534,74 @@ textarea {
 }
 
 //===================================================
+// Cards
+// 
+//  <div class="card">
+    //     <div class="card__image">
+    //       <img src="" alt="">
+    //     </div>
+    //     <div class="card__content">
+    //       <span class="card__title">Card Title</span>
+    //       <p>Card text</p>
+    //     </div>
+    //     <div class="card__action">
+    //         <a href="#" class="button">Action 1</a>
+    //     </div>
+    // </div>
+//===================================================
+
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: $color-white;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+
+  &__content {
+    padding: 2.5rem;
+    border-radius: 0 0 2px 2px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    img {
+      display: block;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: block;
+    line-height: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__action {
+    background-color: inherit;
+    border-top: 1px solid $color-grey-light;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+
+    a, .button, button {
+      margin: 0;
+    }
+  }
+
+}
+
+//===================================================
 // Scroll to top button
 //
 //  <div class="scroll-top-btn"></div>

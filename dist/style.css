@@ -778,6 +778,41 @@ textarea.is-success:active {
 :-ms-input-placeholder {
   color: #0f461a; }
 
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px; }
+  .card__content {
+    padding: 2.5rem;
+    border-radius: 0 0 2px 2px; }
+    .card__content p {
+      margin: 0; }
+  .card__image {
+    position: relative; }
+    .card__image img {
+      display: block;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%; }
+  .card__title {
+    display: block;
+    line-height: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem; }
+  .card__action {
+    background-color: inherit;
+    border-top: 1px solid #f9faf9;
+    position: relative;
+    padding: 1.5rem 2.5rem; }
+    .card__action a, .card__action .button, .card__action button {
+      margin: 0; }
+
 .scroll-top-btn {
   position: fixed;
   bottom: 20px;
@@ -1417,6 +1452,12 @@ kbd {
 
 .invisible {
   visibility: hidden; }
+
+.flex-dir-row {
+  flex-direction: row; }
+
+.flex-dir-col {
+  flex-direction: column; }
 
 .float-left {
   float: left; }
