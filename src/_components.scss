@@ -4,6 +4,93 @@
 *
 */
 
+// Basic navbar
+.nav {
+  background: $color-primary;
+  padding: .5rem;
+  
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem 1rem;
+    @media only screen and (max-width: $medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: $font-size-primary;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 0 0 auto;
+    @media only screen and (max-width: $medium) {
+      display: none;
+      flex-direction: column;
+      margin: 0;
+
+      &--active {
+        display: flex;
+      }
+    }
+
+    li {
+      margin: 0 1rem;
+
+      a {
+        padding: 1rem;
+        @media only screen and (max-width: $medium) {
+          padding-left: 0;
+        }
+      }
+
+      @media only screen and (max-width: $medium) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    margin: 0 0 0 auto;
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    @media only screen and (max-width: $medium) {
+      position: absolute;
+      right: 0;
+      display: block;
+
+      &--active-toggle {
+        position: absolute;
+        top: 1rem;
+      }
+    }
+  }
+
+  &__toggle-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+
 //===================================================
 // Basic Navigation (built for wordpress dynamic menus)
 //
