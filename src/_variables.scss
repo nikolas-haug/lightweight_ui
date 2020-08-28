@@ -166,7 +166,7 @@ $input-color: $color-grey-dark;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid $border-color;
 $form-border-hover: 1px solid darken($border-color, 10%);
-$form-border-focus: 1px solid $color-link;
+$form-border-focus: 1px solid $color-secondary;
 
 $success: green;
 $error: red;
